@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espacio INYO — Matriz Clínica de Anpuku (Indicaciones & Contraindicaciones)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-kanji { font-family: 'Noto Serif JP', serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: white !important; color: black !important; padding: 0 !important; }
+      .page-card { break-inside: avoid; border: 1px solid #ccc !important; box-shadow: none !important; margin-bottom: 1rem !important; }
+      input[type="text"], textarea {
+        border-bottom: 1px solid #000 !important;
+        border-top: none !important; border-left: none !important; border-right: none !important;
+        border-radius: 0 !important; background: transparent !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-800 antialiased min-h-screen pb-12">
+
+  <!-- BARRA DE NAVEGACIÓN Y BOTÓN DE IMPRESIÓN (no-print) -->
+  <div class="no-print bg-stone-900 text-stone-100 py-3 px-6 sticky top-0 z-50 flex justify-between items-center shadow-md">
+    <div class="flex items-center gap-4 text-xs font-medium">
+      <a href="index.html" class="text-amber-400 hover:underline flex items-center gap-1">
+        ← Manual Teórico (index.html)
+      </a>
+      <span class="text-stone-600">|</span>
+      <a href="fukushin.html" class="text-stone-300 hover:text-amber-400 transition">
+        📋 Ficha de Fukushin
+      </a>
+    </div>
+    <button onclick="window.print()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded-full shadow transition flex items-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+      Imprimir / Guardar Matriz (PDF)
+    </button>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL IMPRIMIBLE -->
+  <main class="max-w-4xl mx-auto bg-white p-6 md:p-10 my-0 md:my-8 shadow-sm rounded-xl border border-stone-200">
+    
+    <!-- ENCABEZADO INSTITUCIONAL -->
+    <header class="border-b-2 border-stone-800 pb-6 mb-8">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-amber-800">Espacio INYO — Artes Manuales Japonesas</span>
+          <h1 class="text-2xl md:text-3xl font-bold text-stone-900 font-kanji mt-1">Guía Clínica de Anpuku Tradicional</h1>
+          <p class="text-sm text-stone-600 mt-1">Matriz Visual de Indicaciones, Selección Técnica y Contraindicaciones</p>
+        </div>
+        <div class="text-right">
+          <span class="text-2xl font-bold font-kanji text-stone-400">臨床</span>
+        </div>
+      </div>
+
+      <!-- CAMPOS DE DATOS DEL ESTUDIANTE -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-sm">
+        <div>
+          <label class="block font-semibold text-xs text-stone-500 uppercase">Estudiante / Terapeuta:</label>
+          <input type="text" placeholder="Nombre completo" class="w-full mt-1 border-b border-stone-300 focus:outline-none focus:border-amber-700 py-1">
+        </div>
+        <div>
+          <label class="block font-semibold text-xs text-stone-500 uppercase">Fecha:</label>
+          <input type="text" placeholder="DD / MM / AAAA" class="w-full mt-1 border-b border-stone-300 focus:outline-none focus:border-amber-700 py-1">
+        </div>
+        <div>
+          <label class="block font-semibold text-xs text-stone-500 uppercase">Módulo de Práctica:</label>
+          <input type="text" placeholder="Anpuku Capítulo 1 - 8" class="w-full mt-1 border-b border-stone-300 focus:outline-none focus:border-amber-700 py-1">
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN I: MATRIZ DE LOS 5 PRINCIPIOS -->
+    <section class="mb-10 space-y-6">
+      <h2 class="text-xl font-bold text-stone-900 border-b-2 border-stone-800 pb-2 flex items-center justify-between">
+        <span>I. Criterios de Aplicación Según los 5 Principios (Fukushin)</span>
+        <span class="text-xs font-normal text-stone-500 font-kanji">五原則の適用</span>
+      </h2>
+
+      <div class="grid grid-cols-1 gap-4 text-xs">
+        
+        <!-- PRINCIPIO 1: JITSU -->
+        <article class="page-card p-4 rounded-lg border border-stone-200 bg-stone-50">
+          <h3 class="font-bold text-stone-900 text-sm font-kanji mb-2">1. Jitsu — Abdomen Fecundo (実)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-emerald-50 border border-emerald-200 p-3 rounded">
+              <span class="font-bold text-emerald-900 uppercase block mb-1">✓ Recomendable Aplicar:</span>
+              <p class="text-emerald-800">Técnicas de sintonización y confort: <strong>Kyori no Te (Cap. 1)</strong> en fase de escucha ligera o <strong>Ikei no Te (Cap. 4)</strong> con ritmo suave para acompañar la armonía natural del Ki.</p>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 p-3 rounded">
+              <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
+              <p class="text-rose-800">Infiltraciones profundas repetidas (Nivel 2 de Kyuubi no Te) o barridos de dispersión intensos (Funhai no Te). Rompe la homeostasis de un vientre ya equilibrado.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRINCIPIO 2: KYO -->
+        <article class="page-card p-4 rounded-lg border border-stone-200 bg-stone-50">
+          <h3 class="font-bold text-stone-900 text-sm font-kanji mb-2">2. Kyo — Abdomen Insustancial / Vacío (虚)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-emerald-50 border border-emerald-200 p-3 rounded">
+              <span class="font-bold text-emerald-900 uppercase block mb-1">✓ Recomendable Aplicar:</span>
+              <p class="text-emerald-800">Contención, nutrición y calor palmar (On-yū): <strong>Kyori no Te (Cap. 1)</strong> enfatizando la mano derecha sobre el pecho, e <strong>Ikei no Te (Cap. 4)</strong> muy lento emitiendo calor desde Rōkyū.</p>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 p-3 rounded">
+              <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
+              <p class="text-rose-800">Técnicas de dispersión (Funhai: Cap. 2, Cap. 3 y Cap. 5) o penetraciones secas. El abdomen en vacío carece de energía para dispersar y se debilitaría aún más.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRINCIPIO 3: DOKI -->
+        <article class="page-card p-4 rounded-lg border border-stone-200 bg-stone-50">
+          <h3 class="font-bold text-stone-900 text-sm font-kanji mb-2">3. Dōki — Palpitación Aórtica / Pulso Violento (動気)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-emerald-50 border border-emerald-200 p-3 rounded">
+              <span class="font-bold text-emerald-900 uppercase block mb-1">✓ Recomendable Aplicar:</span>
+              <p class="text-emerald-800">Sedación psíquica y pacificación del Shin: <strong>Kyori no Te (Cap. 1)</strong> para calmar la mente y <strong>Koukyuu no Te (Cap. 8)</strong> en descenso suave para activar la respuesta parasimpática.</p>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 p-3 rounded">
+              <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
+              <p class="text-rose-800">Presión perpendicular profunda sobre la aorta (Nivel 2 de Kyuubi no Te / Cap. 6). Irrita el plexo celiaco; mantener la presión en Nivel 1 (12,12 mm) o en la superficie.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRINCIPIO 4: RENKYU -->
+        <article class="page-card p-4 rounded-lg border border-stone-200 bg-stone-50">
+          <h3 class="font-bold text-stone-900 text-sm font-kanji mb-2">4. Renkyū / Ijō Kinchō — Tensión Anormal / Hipertonía (攣急)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-emerald-50 border border-emerald-200 p-3 rounded">
+              <span class="font-bold text-emerald-900 uppercase block mb-1">✓ Recomendable Aplicar:</span>
+              <p class="text-emerald-800">Sedación gradual de bajo umbral: <strong>Koukyuu no Te (Cap. 8)</strong> es la maniobra principal ante hipertonía muscular, combinada con deslices de <strong>Ikei no Te (Cap. 4)</strong>.</p>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 p-3 rounded">
+              <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
+              <p class="text-rose-800">Presiones puntuales secas o punzantes. Recordar la Regla de Oro: "No es bueno presionar muy fuerte", ya que gatilla el reflejo miotático defensivo y agrava el espasmo.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRINCIPIO 5: SHIKORI -->
+        <article class="page-card p-4 rounded-lg border border-stone-200 bg-stone-50">
+          <h3 class="font-bold text-stone-900 text-sm font-kanji mb-2">5. Kekkai / Shikori — Masas Abdominales Indeterminadas (結塊)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-emerald-50 border border-emerald-200 p-3 rounded">
+              <span class="font-bold text-emerald-900 uppercase block mb-1">✓ Recomendable Aplicar:</span>
+              <p class="text-emerald-800">Palpación de diagnóstico comparativo: <strong>Fuyou no Te (Cap. 7)</strong> mediante Pinza en Arco para distinguir si la masa es Shaku (fija) o Ju (móvil).</p>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 p-3 rounded">
+              <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
+              <p class="text-rose-800">Nunca intentar "romper" o aplastar una masa profunda, sólida, fija e indolora de origen indeterminado. Derivar siempre a evaluación médica profesional.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN II: MATRIZ VISUAL DE LOS MAPAS DEL HARA CON IMÁGENES .PNG -->
+    <section class="mb-10 space-y-6">
+      <h2 class="text-xl font-bold text-stone-900 border-b-2 border-stone-800 pb-2 flex items-center justify-between">
+        <span>II. Matriz Visual de Abordaje Según los Mapas del Hara</span>
+        <span class="text-xs font-normal text-stone-500 font-kanji">病態別適用</span>
+      </h2>
+
+      <div class="space-y-6">
+
+        <!-- MAPA 1 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/shokuhi-no-hara.png" alt="Shokuhi no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/shokuhi-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 1: Shokuhi no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">1. Shokuhi no Hara (Estancamiento Digestivo)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Ikei no Te (Cap. 4)</strong> para descender la plenitud, <strong>Fuyou no Te (Cap. 7)</strong> para desbloquear la zona gástrica y <strong>Funhai no Te (Cap. 5)</strong> para barrer los arcos costales.</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">No sobrepasar hacia abajo la línea del ombligo durante Ikei no Te. Evitar presiones secas o punzantes en la región epigástrica rígida.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MAPA 2 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/shakuju-no-hara.png" alt="Shakuju no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/shakuju-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 2: Shakuju no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">2. Shakuju no Hara (Masas y Energía Emocional / Flanco Izquierdo)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Fuyou no Te (Cap. 7)</strong> en Pinza de Arco, <strong>Funhai no Te (Cap. 5)</strong> y <strong>Hidari Rokkotsu (Cap. 3)</strong> <em>únicamente si NO se aplicó Kyori no Te (Cap. 1)</em>.</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">Omitir Hidari Rokkotsu no Te si ya se ejecutó Kyori no Te en el inicio. Jamás aplicar fuerza bruta sobre Shaku (masa fija).</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MAPA 3 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/kurou-no-hara.png" alt="Kurou no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/kurou-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 3: Kurou no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">3. Kurou no Hara (Sufrimiento del Corazón por Cansancio)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Kyori no Te (Cap. 1)</strong> como maniobra reina para calmar el Kokoro, seguida de contención tibia en <strong>Fuyou no Te (Cap. 7)</strong> e <strong>Ikei no Te (Cap. 4)</strong> suave.</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">Hidari Rokkotsu no Te queda totalmente excluida por la regla de Kyori no Te. Evitar barridos agresivos e intensos de dispersión.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MAPA 4 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/nanji-no-hara.png" alt="Nanji no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/nanji-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 4: Nanji no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">4. Nanji no Hara (Abdomen de Difícil Curación / Masa Esternal)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Kyori no Te (Cap. 1)</strong> en contención, <strong>Kyuubi no Te (Cap. 6)</strong> limitado estrictamente a Nivel 1 (~12,12 mm / fascial) y <strong>Fuyou no Te (Cap. 7)</strong> sostenido.</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">Evitar infiltraciones bruscas directas en Nivel 2 de Kyuubi no Te. No realizar maniobras de choque sobre el apéndice xifoides.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MAPA 5 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/kekkai-no-hara.png" alt="Kekkai no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/kekkai-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 5: Kekkai no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">5. Kekkai no Hara (Estasis de Sangre en Hipogastrio)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Ikei no Te (Cap. 4)</strong> para promover el descenso vascular, <strong>Kyori no Te (Cap. 1)</strong> y <strong>Fuyou no Te (Cap. 7)</strong> para liberar el abdomen medio.</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">Evitar palpación punzante o profunda directa sobre el hipogastrio inflamado. Jamás realizar compresión pélvica violenta.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MAPA 6 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/kyojin-no-hara.png" alt="Kyojin no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/kyojin-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 6: Kyojin no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">6. Kyojin no Hara (Vacío Extremo y Extenuación)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Kyori no Te (Cap. 1)</strong> en sostenimiento, <strong>Ikei no Te (Cap. 4)</strong> en ritmo muy lento y emisión constante de calor palmar (On-yū).</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">TODAS las técnicas de Funhai (Cap. 2, Cap. 3 y Cap. 5) están strictly contraindicadas. Omitir Nivel 2 de Kyuubi no Te.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MAPA 7 -->
+        <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+              <img src="imagenes/kakke-no-hara.png" alt="Kakke no Hara" class="max-h-36 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x150?text=imagenes/kakke-no-hara.png'">
+              <span class="text-[10px] text-stone-400 font-semibold mt-1 block">Mapa 7: Kakke no Hara</span>
+            </div>
+            <div class="md:col-span-2 space-y-2 text-xs">
+              <h3 class="font-bold text-stone-900 text-sm font-kanji">7. Kakke no Hara (Entumecimiento / Beriberi)</h3>
+              <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
+                <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
+                <p class="text-emerald-800"><strong>Ikei no Te (Cap. 4)</strong>, <strong>Koukyuu no Te (Cap. 8)</strong> en pacificación y aplicación de calor palmar sostenido en la zona infraumbilical.</p>
+              </div>
+              <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+                <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
+                <p class="text-rose-800">Omitir infiltraciones puntuales secas en piel con parestesia. Evitar la presión con golpe o frotación enérgica.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN III: REGLAS INVIOLABLES DE SEGURIDAD -->
+    <section class="page-card p-6 bg-amber-50 rounded-lg border border-amber-300 space-y-4">
+      <h2 class="text-lg font-bold text-amber-950 border-b border-amber-300 pb-2 flex items-center justify-between">
+        <span>III. Reglas de Exclusión y Seguridad Inviolables</span>
+        <span class="text-xs font-normal text-amber-800 font-kanji">鉄則</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-amber-900">
+        <div class="p-3 bg-white rounded border border-amber-200 shadow-sm">
+          <span class="font-bold text-amber-800 block mb-1">1. Exclusión Mutua (Kyori vs. Hidari Rokkotsu):</span>
+          Si aplicaste <strong>Kyori no Te (Cap. 1)</strong>, está PROHIBIDO aplicar Hidari Rokkotsu no Te (Cap. 3). La dispersión dinámica rompería la calma del Kokoro. Si omitiste el Cap. 1, el Cap. 3 es totalmente aplicable.
+        </div>
+        <div class="p-3 bg-white rounded border border-amber-200 shadow-sm">
+          <span class="font-bold text-amber-800 block mb-1">2. Regla de Oro de Koukyuu no Te (Espasmos):</span>
+          Ante contracturas en "cuerda" o fasciculaciones, <strong>jamás presionar con fuerza</strong>. Se debe aplicar el deslizamiento descendente, suave y alternado para sedar el sistema nervioso sin activar el reflejo miotático.
+        </div>
+        <div class="p-3 bg-white rounded border border-amber-200 shadow-sm">
+          <span class="font-bold text-amber-800 block mb-1">3. Límite Umbilical de Ikei no Te:</span>
+          La palma en descenso alternado <strong>jamás debe cruzar hacia abajo la línea horizontal del ombligo (Shinketsu)</strong>. Su función es concentrar la energía en el Receptáculo Central (Hara medio).
+        </div>
+        <div class="p-3 bg-white rounded border border-amber-200 shadow-sm">
+          <span class="font-bold text-amber-800 block mb-1">4. Encuadre Ético y Anatómico Subcostal:</span>
+          Al trabajar el hemitórax izquierdo, <strong>jamás sobrepasar de forma ascendente la línea mamilar</strong>. En mujeres, solicitar siempre que la paciente eleve suavemente la mama para exponer las costillas inferiores.
+        </div>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA IMPRIMIBLE -->
+    <footer class="mt-12 text-center text-xs text-stone-400 border-t border-stone-200 pt-4">
+      Espacio INYO — Formación en Artes Manuales Japonesas Tradicionales • Anma & Anpuku
+    </footer>
+
+  </main>
+
+  <!-- FOOTER WEB ESPACIO INYO (no-print) -->
+  <footer class="no-print bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-xs mt-12">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-center md:text-left">
+        <span class="text-amber-500 font-bold font-kanji text-sm block">Espacio INYO</span>
+        <span>Conexión de contenidos: HIIT + Calistenia, Zen Stretching, Kiryū Dōjō, Yoga, Qigong y Chamanismo.</span>
+      </div>
+      <div class="flex gap-4">
+        <a href="index.html" class="text-amber-400 hover:underline font-semibold">Manual Teórico</a>
+        <span class="text-stone-700">•</span>
+        <a href="fukushin.html" class="text-amber-400 hover:underline font-semibold">Ficha de Fukushin</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
