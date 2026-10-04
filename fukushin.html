@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espacio INYO — Bitácora de Fukushin (Análisis de Hara)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-kanji { font-family: 'Noto Serif JP', serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: white !important; color: black !important; padding: 0 !important; }
+      .page-card { break-inside: avoid; border: 1px solid #ccc !important; box-shadow: none !important; margin-bottom: 1.5rem !important; }
+      input[type="text"], textarea {
+        border-bottom: 1px solid #000 !important;
+        border-top: none !important; border-left: none !important; border-right: none !important;
+        border-radius: 0 !important; background: transparent !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-800 antialiased min-h-screen pb-12">
+
+  <!-- BARRA DE NAVEGACIÓN Y BOTÓN DE IMPRESIÓN (no-print) -->
+  <div class="no-print bg-stone-900 text-stone-100 py-3 px-6 sticky top-0 z-50 flex justify-between items-center shadow-md">
+    <a href="index.html" class="text-xs text-amber-400 hover:underline flex items-center gap-1 font-medium">
+      ← Volver al Manual Teórico
+    </a>
+    <button onclick="window.print()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded-full shadow transition flex items-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+      Imprimir / Guardar en PDF
+    </button>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL IMPRIMIBLE -->
+  <main class="max-w-4xl mx-auto bg-white p-6 md:p-10 my-0 md:my-8 shadow-sm rounded-xl border border-stone-200">
+    
+    <!-- ENCABEZADO INSTITUCIONAL -->
+    <header class="border-b-2 border-stone-800 pb-6 mb-8">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-amber-800">Espacio INYO — Artes Manuales Japonesas</span>
+          <h1 class="text-2xl md:text-3xl font-bold text-stone-900 font-kanji mt-1">Anma & Anpuku Tradicional</h1>
+          <p class="text-sm text-stone-600 mt-1">Cuaderno de Práctica Clínica: Evaluación y Diagnóstico Abdominal (Fukushin)</p>
+        </div>
+        <div class="text-right">
+          <span class="text-2xl font-bold font-kanji text-stone-400">腹診</span>
+        </div>
+      </div>
+
+      <!-- CAMPOS DE DATOS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-sm">
+        <div>
+          <label class="block font-semibold text-xs text-stone-500 uppercase">Alumno / Terapeuta:</label>
+          <input type="text" placeholder="Nombre completo" class="w-full mt-1 border-b border-stone-300 focus:outline-none focus:border-amber-700 py-1">
+        </div>
+        <div>
+          <label class="block font-semibold text-xs text-stone-500 uppercase">Fecha de Práctica:</label>
+          <input type="text" placeholder="DD / MM / AAAA" class="w-full mt-1 border-b border-stone-300 focus:outline-none focus:border-amber-700 py-1">
+        </div>
+        <div>
+          <label class="block font-semibold text-xs text-stone-500 uppercase">Compañero / Receptor:</label>
+          <input type="text" placeholder="Nombre completo" class="w-full mt-1 border-b border-stone-300 focus:outline-none focus:border-amber-700 py-1">
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN I: LOS 5 PRINCIPIOS -->
+    <section class="mb-10 page-card p-6 bg-stone-50 rounded-lg border border-stone-200">
+      <h2 class="text-lg font-bold text-stone-900 border-b border-stone-300 pb-2 mb-4 flex items-center justify-between">
+        <span>I. Registro de los 5 Principios Cardinales</span>
+        <span class="text-xs font-normal text-stone-500 font-kanji">五原則</span>
+      </h2>
+      <div class="space-y-3 text-sm">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 accent-amber-800">
+          <div><span class="font-bold text-stone-800">1. Jitsu (Fecundo):</span> Piel gruesa, elástica, tono firme e hidratación natural. Sin tensión ni masas.</div>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 accent-amber-800">
+          <div><span class="font-bold text-stone-800">2. Kyo (Insustancial):</span> Piel fina, blanda, fría o seca. Cede sin elasticidad ("sensación de vacío").</div>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 accent-amber-800">
+          <div>
+            <span class="font-bold text-stone-800">3. Dōki (Palpitación Aórtica):</span> Evaluar pulso umbilical.
+            <span class="text-xs text-stone-500 italic block mt-0.5">( ) Suave / Pacífico &nbsp;&nbsp;&nbsp; ( ) Rápido / Violento</span>
+          </div>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 accent-amber-800">
+          <div><span class="font-bold text-stone-800">4. Renkyū / Ijō Kinchō (Tensión Anormal):</span> Contractura defensiva o hipertonía de rectos u oblicuos.</div>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 accent-amber-800">
+          <div><span class="font-bold text-stone-800">5. Kekkai / Shikori (Masas Abdominales):</span> Presencia de núcleos duros o congestiones palpables.</div>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECCIÓN II: MAPAS DEL HARA -->
+    <section class="space-y-8">
+      <h2 class="text-xl font-bold text-stone-900 border-b-2 border-stone-800 pb-2 mb-6">
+        II. Fichero de Cartografía Abdominal (Hara no Shinki)
+      </h2>
+
+      <!-- MAPA 1 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 1</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Shokuhi no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Sentir opresión abdominal (Estancamiento Digestivo)</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Abdomen endurecido por alimentos no digeridos (Shokutai) y disfunción de Bazo/Estómago. Genera dolor/tensión refleja en la espalda a la altura de las vértebras <strong>D7 y D9</strong>.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/shokuhi-no-hara.jpg" alt="Shokuhi no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/shokuhi-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="Registra la firmeza de la pared abdominal y hallazgos en D7-D9..."></textarea>
+        </div>
+      </article>
+
+      <!-- MAPA 2 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 2</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Shakuju no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Masas del abdomen (Shaku inmóvil / Ju móvil)</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Sensación fluido-acuosa y energía móvil/pulsátil en el <strong>lado izquierdo</strong>. Vinculado a ira o enfado reprimido que genera energía dañina (Jaki).
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/shakuju-no-hara.jpg" alt="Shakuju no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/shakuju-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="¿Se percibe Shaku (fijo) o Ju (móvil)? Respuesta táctil en flanco izquierdo..."></textarea>
+        </div>
+      </article>
+
+      <!-- MAPA 3 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 3</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Kurou no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Sufrimiento del corazón por cansancio</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Masa endurecida romboidal desde epigastrio hacia el <strong>reborde costal izquierdo</strong> (Estómago/Bazo). Refleja agotamiento del Kokoro, insomnio y fatiga.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/kurou-no-hara.jpg" alt="Kurou no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/kurou-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="Evaluación del tono en reborde costal izquierdo y respuesta al calor palmar..."></textarea>
+        </div>
+      </article>
+
+      <!-- MAPA 4 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 4</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Nanji no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Abdomen de difícil curación</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Masa o rigidez densa que asciende desde el centro del vientre hasta la base del esternón. Se mantiene rígida e inmóvil bajo la presión (Shaku consolidado).
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/nanji-no-hara.jpg" alt="Nanji no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/nanji-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="Resistencia en la línea media epigástrica y movilidad del tejido..."></textarea>
+        </div>
+      </article>
+
+      <!-- MAPA 5 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 5</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Kekkai no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Abdomen con coágulo o estasis de sangre</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Masa fija en hipogastrio. En mujeres indica estasis sanguínea pélvica/ginecológica (Ketsukai). En hombres se manifiesta con dolor en caderas e ingles.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/kekkai-no-hara.jpg" alt="Kekkai no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/kekkai-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="Hallazgos táctiles en hipogastrio y fosas ilíacas..."></textarea>
+        </div>
+      </article>
+
+      <!-- MAPA 6 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 6</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Kyojin no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Vacío extremo y extenuación</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Pérdida generalizada de tono muscular; piel fría, seca o áspera. Tórax elevado por compensación respiratoria. Signo de extenuación profunda de Ki.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/kyojin-no-hara.jpg" alt="Kyojin no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/kyojin-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="Temperatura, textura de piel y observación respiratoria..."></textarea>
+        </div>
+      </article>
+
+      <!-- MAPA 7 -->
+      <article class="page-card border border-stone-200 rounded-lg p-5 bg-white shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Mapa 7</span>
+            <h3 class="text-lg font-bold text-stone-900 font-kanji">Kakke no Hara</h3>
+            <p class="text-xs text-stone-500 font-semibold mb-2">Entumecimiento / Beriberi</p>
+            <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+              Parestesia o pérdida de sensibilidad táctil por debajo del ombligo. Refleja deficiencia de conducción de Ki/Ketsu hacia extremidades inferiores.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-2 rounded border border-stone-200 text-center">
+            <img src="imagenes/kakke-no-hara.jpg" alt="Kakke no Hara" class="max-h-48 mx-auto rounded object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=imagenes/kakke-no-hara.jpg'">
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-200 text-xs">
+          <label class="font-bold text-stone-700 block mb-1">Notas de Palpación en Clase:</label>
+          <textarea rows="2" class="w-full border border-stone-200 rounded p-2 focus:outline-none focus:border-amber-700" placeholder="Respuesta del receptor a la palpación infraumbilical..."></textarea>
+        </div>
+      </article>
+    </section>
+
+    <!-- SECCIÓN III: SÍNTESIS Y PLAN -->
+    <section class="mt-10 page-card p-6 bg-stone-50 rounded-lg border border-stone-200">
+      <h2 class="text-lg font-bold text-stone-900 border-b border-stone-300 pb-2 mb-4">
+        III. Síntesis y Estrategia Terapéutica para la Sesión
+      </h2>
+      <div class="space-y-4 text-xs">
+        <div>
+          <label class="font-bold text-stone-800 block mb-1">1. Patrón o Mapa predominantemente observado en el receptor:</label>
+          <input type="text" class="w-full border-b border-stone-300 bg-transparent py-1 focus:outline-none">
+        </div>
+        <div>
+          <label class="font-bold text-stone-800 block mb-1">2. Técnica inicial de Anpuku recomendada según el diagnóstico de Fukushin:</label>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-2 pt-1 text-stone-700">
+            <label><input type="checkbox" class="mr-1"> Kyori no Te</label>
+            <label><input type="checkbox" class="mr-1"> Migi no Kyoukotsu</label>
+            <label><input type="checkbox" class="mr-1"> Hidari Rokkotsu</label>
+            <label><input type="checkbox" class="mr-1"> Ikei no Te</label>
+            <label><input type="checkbox" class="mr-1"> Funhai no Te</label>
+            <label><input type="checkbox" class="mr-1"> Kyuubi no Te</label>
+            <label><input type="checkbox" class="mr-1"> Fuyou no Te</label>
+            <label><input type="checkbox" class="mr-1"> Koukyuu no Te</label>
+          </div>
+        </div>
+        <div>
+          <label class="font-bold text-stone-800 block mb-1">3. Justificación técnica de la elección:</label>
+          <textarea rows="3" class="w-full border border-stone-300 rounded p-2 focus:outline-none focus:border-amber-700 bg-white" placeholder="Explica por qué seleccionaste esta maniobra inicial basándote en la exhalación, el tono o la masa encontrada..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA IMPRIMIBLE -->
+    <footer class="mt-12 text-center text-xs text-stone-400 border-t border-stone-200 pt-4">
+      Espacio INYO — Formación en Artes Manuales Japonesas Tradicionales • Anma & Anpuku
+    </footer>
+
+  </main>
+
+  <!-- FOOTER WEB ESPACIO INYO (no-print) -->
+  <footer class="no-print bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-xs mt-12">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-center md:text-left">
+        <span class="text-amber-500 font-bold font-kanji text-sm block">Espacio INYO</span>
+        <span>Conexión de contenidos: HIIT + Calistenia, Zen Stretching, Kiryū Dōjō, Yoga, Qigong y Chamanismo.</span>
+      </div>
+      <div>
+        <a href="index.html" class="text-amber-400 hover:underline font-semibold">Ir al Manual Teórico (index.html) →</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
