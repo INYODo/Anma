@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espacio INYO — Guía de Aplicación Técnica de Anpuku (8 Pasos)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-kanji { font-family: 'Noto Serif JP', serif; }
+    
+    /* CONFIGURACIÓN DE IMPRESIÓN RIGUROSA (EXACTAMENTE 4 CARILLAS / 2 HOJAS DOBLE CARA) */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0.6cm !important;
+      }
+      html, body {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: white !important;
+        color: black !important;
+        font-size: 10px !important;
+      }
+      .no-print { display: none !important; }
+      
+      main {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      main > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .carilla { 
+        width: 100% !important;
+        height: 265mm !important;
+        max-height: 265mm !important;
+        padding: 3mm 5mm !important;
+        box-sizing: border-box !important;
+        page-break-after: always !important; 
+        break-after: page !important; 
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+      }
+      section:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-800 antialiased min-h-screen pb-12">
+
+  <!-- BARRA DE NAVEGACIÓN Y BOTÓN DE IMPRESIÓN (no-print) -->
+  <div class="no-print bg-stone-900 text-stone-100 py-3 px-6 sticky top-0 z-50 flex justify-between items-center shadow-md">
+    <div class="flex items-center gap-3 text-xs font-medium overflow-x-auto">
+      <a href="index.html" class="text-amber-400 hover:underline">← Manual Teórico</a>
+      <span class="text-stone-600">|</span>
+      <a href="fukushin.html" class="text-stone-300 hover:text-amber-400">📋 Ficha Fukushin</a>
+      <span class="text-stone-600">|</span>
+      <a href="matriz-clinica.html" class="text-stone-300 hover:text-amber-400">📊 Matriz Clínica</a>
+      <span class="text-stone-600">|</span>
+      <a href="puntos-shu.html" class="text-stone-300 hover:text-amber-400">📍 Puntos Shu</a>
+    </div>
+    <button onclick="window.print()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded-full shadow transition flex items-center gap-2 whitespace-nowrap">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+      Imprimir Guía de Aplicación (PDF)
+    </button>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL IMPRIMIBLE -->
+  <main class="max-w-4xl mx-auto my-0 md:my-6 space-y-12">
+
+    <!-- ================= CARILLA 1: TÉCNICAS 1 Y 2 (HOJA 1 - FRENTE) ================= -->
+    <section class="carilla bg-white p-6 md:p-8 shadow-sm rounded-xl border border-stone-200">
+      <header class="border-b-2 border-stone-800 pb-2 mb-3 flex justify-between items-start">
+        <div>
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-amber-800 block">Espacio INYO — Guía Práctica de Anpuku</span>
+          <h1 class="text-xl md:text-2xl font-bold text-stone-900 font-kanji">Protocolo Técnico en Futón: Pasos 1 y 2</h1>
+          <p class="text-xs text-stone-600">Apertura Diagnóstica y Dispersión del Hemitórax Derecho</p>
+        </div>
+        <div class="text-right">
+          <span class="text-lg md:text-xl font-bold font-kanji text-stone-400">手技録</span>
+          <span class="block text-[10px] text-stone-500 uppercase tracking-wider font-bold">Página 1 / 4 (Hoja 1 - Frente)</span>
+        </div>
+      </header>
+
+      <div class="space-y-3.5 my-auto">
+        <!-- TÉCNICA 1 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 1: Kyori no Te (La Mano de Kori)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">巨里の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Se dirige al Kokoro (心), unificando corazón físico, mente y emociones. Permite "entender la verdad y la mentira de la persona" examinando el latido aórtico/Kori. Calma la energía de la mente (Shin) y apacigua el espíritu.</p>
+            <p><strong>II. Anatomía Sutil:</strong> Hipocondrio izquierdo y epigastrio alto. Conecta directamente con el centro de resonancia del pecho y el plexo solar alto.</p>
+            <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la izquierda del paciente en <em>Tate-hiza</em> o <em>Seiza</em>. Coloca la mano izquierda (infiltración) por debajo de las costillas izquierdas orientada hacia el epigastrio; coloca la mano derecha (contención) sobre la superficie costal izquierda. Durante la exhalación, infiltra dedos izquierdos para escuchar el latido de Kori durante 1 a 2 minutos.</p>
+            <p><strong>IV. Criterio Clínico:</strong> Si el tórax está rígido, prioriza el calor de la mano derecha antes de infiltrar la izquierda.</p>
+          </div>
+        </article>
+
+        <!-- TÉCNICA 2 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 2: Migi no Kyoukotsu no Te (Mano del Esternón Derecho)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">右胸骨の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Basado en el principio cardinal de <em>Funhai</em> (払排 — barrer/dispersar). Moviliza el estancamiento (Ketsu-yū) y expulsa energía dañina (Jaki) en los espacios intercostales derechos. Trazo estrictamente unidireccional.</p>
+            <p><strong>II. Anatomía Sutil:</strong> Espacios intercostales derechos. Cruza trayectos de Riñón, Estómago, Vesícula Biliar y puntos Shu del dorso.</p>
+            <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la derecha en <em>Tate-hiza</em>. Mano izquierda activa en "peine intercostal" y mano derecha pasiva de apoyo en epigastrio o cresta ilíaca izquierda. Desliza las yemas durante la exhalación desde el esternón hacia la espalda. Retorna siempre por el aire sin fricción retrógrada.</p>
+            <p><strong>IV. Criterio Clínico:</strong> Ante plenitud rígida (Kyōkyō Kanku), disminuye la velocidad y aumenta el calor palmar sin forzar.</p>
+          </div>
+        </article>
+      </div>
+
+      <footer class="mt-2 text-center text-[10px] text-stone-400 border-t border-stone-200 pt-1.5">
+        Espacio INYO — Formación Tradicional en Anma, Shiatsu & Medicina Manual Japonesa
+      </footer>
+    </section>
+
+    <!-- ================= CARILLA 2: TÉCNICAS 3 Y 4 (HOJA 1 - DORSO) ================= -->
+    <section class="carilla bg-white p-6 md:p-8 shadow-sm rounded-xl border border-stone-200">
+      <header class="border-b-2 border-stone-800 pb-2 mb-3 flex justify-between items-start">
+        <div>
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-amber-800 block">Espacio INYO — Guía Práctica de Anpuku</span>
+          <h1 class="text-xl md:text-2xl font-bold text-stone-900 font-kanji">Protocolo Técnico en Futón: Pasos 3 y 4</h1>
+          <p class="text-xs text-stone-600">Dispersión Costal Izquierda y Descenso del Ki Gástrico</p>
+        </div>
+        <div class="text-right">
+          <span class="text-lg md:text-xl font-bold font-kanji text-stone-400">手技録</span>
+          <span class="block text-[10px] text-stone-500 uppercase tracking-wider font-bold">Página 2 / 4 (Hoja 1 - Dorso)</span>
+        </div>
+      </header>
+
+      <div class="space-y-3.5 my-auto">
+        <!-- TÉCNICA 3 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 3: Hidari Rokkotsu no Te (Mano de la Costilla Izquierda)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">左肋骨の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Dispersión dinámica (Funhai) en el hemitórax izquierdo para drenar la tensión subcostal izquierda.</p>
+            <p><strong>II. Regla de Exclusión Inviolable:</strong> Si se aplicó <em>Kyori no Te</em> (Cap. 1), <strong>NO se realiza esta técnica</strong> para preservar la quietud alcanzada. Si se omitió el Cap. 1, se ejecuta como técnica principal de apertura.</p>
+            <p><strong>III. Anatomía Sutil y Encuadre Ético:</strong> Espacios intercostales izquierdos bajo la línea mamilar (Qimen H 14, Dabao BP 21). En pacientes mujeres, solicitar que la paciente eleve suavemente su mama izquierda con su propia mano para despejar las costillas.</p>
+            <p><strong>IV. Protocolo en Futón:</strong> Arrodíllate a la izquierda. Desliza yemas en exhalación desde el esternón hacia el flanco/espalda con retorno aéreo suave.</p>
+          </div>
+        </article>
+
+        <!-- TÉCNICA 4 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 4: Ikei no Te (Mano del Meridiano de Estómago)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">胃経の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Restablece la dirección descendente fisiológica del Ki del Estómago (<em>I-ki wa kōsu</em>). Desciende la energía rebelde que genera ansiedad, plenitud torácica y opresión gástrica.</p>
+            <p><strong>II. Anatomía Sutil:</strong> Franja del canal de estómago (a 2 cun de la línea media) desde el tórax inferior hasta Shinketsu (ombligo / Ren 8).</p>
+            <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la derecha. Efectúa un movimiento rítmico de "ola alternada" de palmas relajadas descendiendo desde el pecho hacia el ombligo en exhalación continua, emitiendo calor desde el centro palmar (Rōkyū).</p>
+            <p><strong>IV. Límite Anatómico Estricto:</strong> La palma jamás debe cruzar hacia abajo la línea horizontal del ombligo.</p>
+          </div>
+        </article>
+      </div>
+
+      <footer class="mt-2 text-center text-[10px] text-stone-400 border-t border-stone-200 pt-1.5">
+        Espacio INYO — Formación Tradicional en Anma, Shiatsu & Medicina Manual Japonesa
+      </footer>
+    </section>
+
+    <!-- ================= CARILLA 3: TÉCNICAS 5 Y 6 (HOJA 2 - FRENTE) ================= -->
+    <section class="carilla bg-white p-6 md:p-8 shadow-sm rounded-xl border border-stone-200">
+      <header class="border-b-2 border-stone-800 pb-2 mb-3 flex justify-between items-start">
+        <div>
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-amber-800 block">Espacio INYO — Guía Práctica de Anpuku</span>
+          <h1 class="text-xl md:text-2xl font-bold text-stone-900 font-kanji">Protocolo Técnico en Futón: Pasos 5 y 6</h1>
+          <p class="text-xs text-stone-600">Dispersión en Abanico e Infiltración Fascial Epigástrica</p>
+        </div>
+        <div class="text-right">
+          <span class="text-lg md:text-xl font-bold font-kanji text-stone-400">手技録</span>
+          <span class="block text-[10px] text-stone-500 uppercase tracking-wider font-bold">Página 3 / 4 (Hoja 2 - Frente)</span>
+        </div>
+      </header>
+
+      <div class="space-y-3.5 my-auto">
+        <!-- TÉCNICA 5 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 5: Funhai no Te (Mano de Dispersión Subcostal)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">払排の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Barrido divergente y bilateral para descongestionar el diafragma, abrir los hipocondrios y liberar la opresión toraco-abdominal (Kyōkyō Kanku).</p>
+            <p><strong>II. Anatomía Sutil:</strong> Se extiende desde Kyuubi Ketsu (Ren 14 / Juque en epigastrio) bordeando los rebordes costales hacia Shoumon Ketsu (H 13 / 11ª costilla flotante).</p>
+            <p><strong>III. Protocolo en Futón:</strong> Ubícate a la derecha o a la cabecera. Utiliza las yemas de los pulgares o cuatro dedos en trazo divergente alternado en abanico (primero hemitórax derecho, luego izquierdo) recorriendo el margen subcostal durante la exhalación.</p>
+            <p><strong>IV. Criterio Clínico:</strong> No presionar contra el borde óseo; la fuerza viaja tangencialmente hacia los laterales.</p>
+          </div>
+        </article>
+
+        <!-- TÉCNICA 6 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 6: Kyuubi no Te (La Mano de Kyuubi)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">鳩尾の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Infiltración perpendicular precisa en el plexo solar para evaluar y disolver la plenitud (Jitsu) y regular la raíz del corazón.</p>
+            <p><strong>II. Anatomía Sutil:</strong> Kyuubi Ketsu (Ren 14 / Juque), punto Mu ventral de Corazón.</p>
+            <p><strong>III. Protocolo en Futón:</strong> Posición de "Triple Alianza" (índice, mayor y anular juntos) de la mano derecha reforzada sobre el dorso por la mano izquierda. Infiltración gradual en 2 niveles durante la exhalación:</p>
+            <ul class="pl-3 space-y-0.5">
+              <li>• <strong>Nivel 1:</strong> ~12,12 mm (4 Bu) — Nivel fascial/superficial.</li>
+              <li>• <strong>Nivel 2:</strong> ~18,18 mm (6 Bu) — Nivel profundo visceral.</li>
+            </ul>
+            <p><strong>IV. Nota de Seguridad:</strong> Si el pulso aórtico (Dōki) es violento o acelerado, <strong>prohibido profundizar en Nivel 2</strong>; mantener en superficie.</p>
+          </div>
+        </article>
+      </div>
+
+      <footer class="mt-2 text-center text-[10px] text-stone-400 border-t border-stone-200 pt-1.5">
+        Espacio INYO — Formación Tradicional en Anma, Shiatsu & Medicina Manual Japonesa
+      </footer>
+    </section>
+
+    <!-- ================= CARILLA 4: TÉCNICAS 7 Y 8 (HOJA 2 - DORSO) ================= -->
+    <section class="carilla bg-white p-6 md:p-8 shadow-sm rounded-xl border border-stone-200">
+      <header class="border-b-2 border-stone-800 pb-2 mb-3 flex justify-between items-start">
+        <div>
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-amber-800 block">Espacio INYO — Guía Práctica de Anpuku</span>
+          <h1 class="text-xl md:text-2xl font-bold text-stone-900 font-kanji">Protocolo Técnico en Futón: Pasos 7 y 8</h1>
+          <p class="text-xs text-stone-600">Dispersión de Masas y Pacificación de Espasmos Abdominales</p>
+        </div>
+        <div class="text-right">
+          <span class="text-lg md:text-xl font-bold font-kanji text-stone-400">手技録</span>
+          <span class="block text-[10px] text-stone-500 uppercase tracking-wider font-bold">Página 4 / 4 (Hoja 2 - Dorso)</span>
+        </div>
+      </header>
+
+      <div class="space-y-3.5 my-auto">
+        <!-- TÉCNICA 7 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 7: Fuyou no Te (La Mano de Fuyou)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">不容の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Evaluación y disolución de masas abdominales (Shakuju). Diferencia masas estables (Shaku fijo / Yin) de masas dispersables (Ju móvil / Yang) y desobstruye el píloro.</p>
+            <p><strong>II. Anatomía Sutil:</strong> Fuyou Ketsu (E 21 / Liangmen alto) en el borde costal donde emerge el canal de estómago.</p>
+            <p><strong>III. Protocolo en Futón:</strong> Emplea la "Pinza en Arco" (índice y corazón por un lado, pulgar por el opuesto) o Triple Alianza. Penetra suavemente en exhalación siguiendo el eje respiratorio, sosteniendo la presión estacionaria hasta notar el reblandecimiento del tejido.</p>
+            <p><strong>IV. Criterio Clínico:</strong> Jamás aplastar con fuerza una masa dura e inmóvil de origen indeterminado.</p>
+          </div>
+        </article>
+
+        <!-- TÉCNICA 8 -->
+        <article class="p-3.5 bg-stone-50 rounded-lg border border-stone-200 shadow-sm">
+          <div class="flex justify-between items-baseline border-b border-stone-300 pb-1 mb-2">
+            <h2 class="font-bold text-stone-900 text-sm md:text-base font-kanji">Capítulo 8: Koukyuu no Te (La Mano de Koukyuu)</h2>
+            <span class="text-xs font-semibold text-amber-800 font-kanji">拘急の手</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] leading-snug text-stone-700">
+            <p><strong>I. Fundamentos e Intención:</strong> Sedación de estados de hipertonía (Renkyū), fasciculaciones musculares o espasmos reflejos del vientre.</p>
+            <p><strong>II. Regla de Oro Inviolable:</strong> <em>"No es bueno presionar muy fuerte"</em>. La fuerza invasiva activa el reflejo miotático de defensa empeorando el espasmo.</p>
+            <p><strong>III. Anatomía Sutil:</strong> Franja rectilínea desde el hipocondrio inferior hasta Tensū Ketsu (E 25 / línea paraumbilical).</p>
+            <p><strong>IV. Protocolo en Futón:</strong> Deslizamiento blando, continuo, envolvente y alternado de ambas palmas bien tibias. El estímulo debe ser de muy bajo umbral para activar la respuesta parasimpática y apaciguar el sistema nervioso.</p>
+          </div>
+        </article>
+      </div>
+
+      <footer class="mt-2 text-center text-[10px] text-stone-400 border-t border-stone-200 pt-1.5">
+        Espacio INYO — Formación Tradicional en Anma, Shiatsu & Medicina Manual Japonesa
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- FOOTER WEB ESPACIO INYO (no-print) -->
+  <footer class="no-print bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-xs mt-12">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-center md:text-left">
+        <span class="text-amber-500 font-bold font-kanji text-sm block">Espacio INYO</span>
+        <span>Ecosistema de actividades: HIIT + Calistenia, Zen Stretching, Artes Marciales Kiryū Dōjō, Yoga, Qigong (Profe Alejandra Paz) y Chamanismo (Ignacio Digas).</span>
+      </div>
+      <div class="flex gap-4">
+        <a href="index.html" class="text-amber-400 hover:underline font-semibold">Manual Teórico</a>
+        <span class="text-stone-700">•</span>
+        <a href="fukushin.html" class="text-amber-400 hover:underline font-semibold">Fukushin</a>
+        <span class="text-stone-700">•</span>
+        <a href="matriz-clinica.html" class="text-amber-400 hover:underline font-semibold">Matriz Clínica</a>
+        <span class="text-stone-700">•</span>
+        <a href="puntos-shu.html" class="text-amber-400 hover:underline font-semibold">Puntos Shu</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
