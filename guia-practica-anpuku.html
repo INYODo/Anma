@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
+    <script>
+    if (sessionStorage.getItem('acceso_inyo') !== 'autorizado') {
+        document.documentElement.style.display = 'none';
+        window.location.href = 'https://inyodo.github.io/Shiatsu-Namikoshi-Modulos/index.html';
+    }
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía Práctica de Anpuku: 8 Técnicas en Futón | Espacio INYO</title>
