@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Práctica de Anpuku: 8 Técnicas en Futón | Espacio INYO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, h4, .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        .font-kanji { font-family: 'Noto Serif JP', serif; }
+        body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #2d2d2d; line-height: 1.8; }
+        
+        .hero-anpuku { 
+            background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.95)), 
+            url('https://inyodo.github.io/espacio-inyo-web/imagen/tecnicasautenticas.jpeg'); 
+            background-size: cover; background-position: center; min-height: 50vh;
+        }
+
+        /* Reproductor Vertical 9:16 Optimizado para Móvil */
+        .video-wrapper-vertical {
+            position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden;
+            max-width: 300px; margin: 1.5rem auto; border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25); background: #1c1917;
+        }
+        .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .instruction-block { border-left: 4px solid #b45309; padding-left: 1.25rem; margin: 1.25rem 0; font-size: 0.92rem; }
+        .badge-step { background: #b45309; color: white; padding: 3px 14px; font-size: 11px; font-weight: bold; border-radius: 2px; display: inline-block; letter-spacing: 0.15em; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegación Superior -->
+    <nav class="bg-stone-900 border-b border-stone-800 text-stone-300 py-3 px-6 text-xs italic sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="hover:text-amber-400 transition flex items-center gap-2">
+                <i class="fas fa-arrow-left text-amber-500"></i> Volver al Manual Teórico
+            </a>
+            <span class="text-stone-400 font-bold uppercase tracking-widest text-[10px]">Espacio INYO ☯️</span>
+        </div>
+    </nav>
+
+    <!-- Header Hero Portada -->
+    <header class="hero-anpuku flex flex-col justify-center items-center text-center p-8 text-white relative">
+        <div class="max-w-4xl space-y-3">
+            <p class="text-amber-400 text-xs tracking-[0.6em] font-bold uppercase">Formación Profesional • Práctica Clínica en Futón</p>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-white uppercase italic">Anpuku Tradicional: 8 Técnicas</h1>
+            <p class="text-stone-300 text-sm md:text-base font-light max-w-2xl mx-auto italic">
+                Acompañamiento audiovisual de la biomecánica, colocación de manos y sincronización respiratoria.
+            </p>
+            <div class="w-20 h-px bg-amber-600 mx-auto mt-4"></div>
+        </div>
+    </header>
+
+    <!-- BOTONERA DE ACCESO A FICHAS DE ESTUDIO E IMPRIMIBLES -->
+    <section class="bg-stone-100 border-b border-stone-200 py-6 px-6">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-3 text-xs italic">
+            <a href="fukushin.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+                <i class="fas fa-clipboard-check text-amber-600"></i> Ficha Fukushin (PDF)
+            </a>
+            <a href="matriz-clinica.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+                <i class="fas fa-table-cells text-amber-600"></i> Matriz Clínica (PDF)
+            </a>
+            <a href="aplicacion-abdomen.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+                <i class="fas fa-print text-amber-600"></i> Protocolo 8 Pasos (PDF)
+            </a>
+            <a href="https://inyodo.github.io/masaje-japones-/puntos-shu.html" class="bg-stone-900 text-white hover:bg-amber-600 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+                <i class="fas fa-map-location-dot text-amber-400"></i> Puntos Shu (Espalda)
+            </a>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto py-16 px-6 space-y-20">
+
+        <!-- CAPÍTULO 1 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 1</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Kyori no Te (La Mano de Kori)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">巨里の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Escucha y apaciguamiento del <em>Kokoro</em> (corazón/mente). Evalúa el latido aórtico y calma la agitación psíquica (*Shin*).</p>
+                <p>• <strong>Postura y Manos:</strong> Arrodillarse a la izquierda en <em>Tate-hiza</em> o <em>Seiza</em>. Mano izquierda (infiltración) bajo el reborde costal izquierdo hacia el epigastrio; mano derecha (contención) plana sobre la parrilla costal izquierda.</p>
+                <p>• <strong>Ritmo:</strong> En la exhalación del paciente se profundiza suavemente para escuchar el latido durante 1 a 2 minutos.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 1</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_1 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_1" title="Capítulo 1: Kyori no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 2 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 2</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Migi no Kyoukotsu no Te (Mano del Esternón Derecho)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">右胸骨の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Maniobra de dispersión (<em>Funhai</em>). Descongestiona el estancamiento intercostal y drena el <em>Jaki</em> (energía perversa).</p>
+                <p>• <strong>Postura y Manos:</strong> Arrodillarse a la derecha en <em>Tate-hiza</em>. Mano derecha de apoyo en epigastrio/cresta ilíaca; mano izquierda activa deslizando las yemas en "peine" por los espacios intercostales derechos.</p>
+                <p>• <strong>Regla de Oro:</strong> Trazo unidireccional estricto desde el esternón hacia la espalda durante la exhalación. El retorno de la mano se realiza siempre por el aire.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 2</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_2 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_2" title="Capítulo 2: Migi no Kyoukotsu no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 3 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 3</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Hidari Rokkotsu no Te (Mano de la Costilla Izquierda)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">左肋骨の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Regla de Exclusión Inviolable:</strong> Si se aplicó <em>Kyori no Te</em> (Cap. 1), <strong>NO se realiza esta técnica</strong>. Si se omitió el Cap. 1, se ejecuta para dispersión del hemitórax izquierdo.</p>
+                <p>• <strong>Encuadre Ético y Anatómico:</strong> El barrido se realiza estrictamente por debajo de la línea mamilar (Qimen H 14, Dabao BP 21). En mujeres, solicitar que la receptora eleve suavemente su mama para despejar las costillas inferiores.</p>
+                <p>• <strong>Dirección:</strong> Desde el esternón hacia el lateral en exhalación con retorno aéreo.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 3</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_3 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_3" title="Capítulo 3: Hidari Rokkotsu no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 4 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 4</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Ikei no Te (Mano del Meridiano de Estómago)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">胃経の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Restablecer el descenso fisiológico del Ki de Estómago (<em>I-ki wa kōsu</em>) para calmar la ansiedad y el nudo epigástrico.</p>
+                <p>• <strong>Dinámica:</strong> Movimiento continuo en "ola alternada" de palmas tibias descendiendo a 2 cun de la línea media desde el tórax inferior.</p>
+                <p>• <strong>Límite Anatómico Estricto:</strong> La palma jamás debe descender más allá de la línea horizontal del ombligo (*Shinketsu* / Ren 8).</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 4</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_4 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_4" title="Capítulo 4: Ikei no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 5 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 5</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Funhai no Te (Mano de Dispersión Subcostal)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">払排の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Barrido divergente para descomprimir la cúpula diafragmática y liberar la opresión subcostal (*Kyōkyō Kanku*).</p>
+                <p>• <strong>Trayecto:</strong> Desde Kyuubi Ketsu (Ren 14 / epigastrio) bordeando ambos rebordes costales hacia Shoumon Ketsu (H 13 / 11ª costilla).</p>
+                <p>• <strong>Técnica:</strong> Trazo en abanico alternado durante la exhalación; la presión viaja en sentido tangencial sin chocar contra el hueso costal.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 5</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_5 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_5" title="Capítulo 5: Funhai no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 6 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 6</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Kyuubi no Te (La Mano de Kyuubi)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">鳩尾の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Infiltración perpendicular precisa en el plexo solar (Ren 14 / Juque) para disolver la plenitud (*Jitsu*) epigástrica.</p>
+                <p>• <strong>Posición de Manos:</strong> "Triple Alianza" (índice, mayor y anular unidos) de la mano derecha reforzada por la mano izquierda.</p>
+                <p>• <strong>Los 2 Niveles:</strong> Nivel 1 (~12 mm / fascial) y Nivel 2 (~18 mm / visceral). <em>Advertencia de seguridad:</em> Si la aorta palpita acelerada o violenta (*Dōki*), está prohibido pasar a Nivel 2.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 6</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_6 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_6" title="Capítulo 6: Kyuubi no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 7 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 7</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Fuyou no Te (La Mano de Fuyou)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">不容の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Diferenciación y disolución de masas abdominales (*Shakuju*: Shaku fijo vs. Ju móvil) a la altura de Estómago 21.</p>
+                <p>• <strong>Manipulación:</strong> Pinza en Arco (pulgar por un lado, índice y medio por el otro) o Triple Alianza. Se profundiza en exhalación sosteniendo de manera estacionaria hasta reblandecer el tejido.</p>
+                <p>• <strong>Criterio:</strong> Jamás intentar "romper" o aplastar con fuerza una masa dura e inmóvil.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 7</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_7 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_7" title="Capítulo 7: Fuyou no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPÍTULO 8 -->
+        <article class="bg-white border border-stone-200 p-6 md:p-8 rounded-sm shadow-sm">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-100 pb-3 mb-4 gap-2">
+                <div>
+                    <span class="badge-step mb-1">CAPÍTULO 8</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-stone-900 uppercase">Koukyuu no Te (La Mano de Koukyuu)</h2>
+                </div>
+                <span class="text-sm font-kanji text-amber-800 font-bold">拘急の手</span>
+            </div>
+
+            <div class="instruction-block space-y-2 text-xs md:text-sm text-stone-700 italic">
+                <p>• <strong>Intención:</strong> Sedación de estados de hipertonía (*Renkyū*), espasmos y tensión refleja hasta la zona de Tensū Ketsu (E 25).</p>
+                <p>• <strong>Regla de Oro Inviolable:</strong> <em>"No es bueno presionar muy fuerte"</em>. La presión brusca dispara el reflejo miotático defensivo y agrava la contractura.</p>
+                <p>• <strong>Técnica:</strong> Deslizamiento envolvente, suave y alternado de ambas palmas bien tibias para activar la respuesta parasimpática.</p>
+            </div>
+
+            <div class="text-center my-6">
+                <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Video Demostrativo: Capítulo 8</p>
+                <div class="video-wrapper-vertical">
+                    <!-- REEMPLAZAR VIDEO_ID_CAPITULO_8 POR EL CÓDIGO DE YOUTUBE -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAPITULO_8" title="Capítulo 8: Koukyuu no Te" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer Institucional Espacio INYO -->
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-xs italic border-t border-stone-800">
+        <h3 class="text-xl font-bold uppercase tracking-widest mb-2 text-white">Espacio INYO ☯️</h3>
+        <p class="text-stone-400">Formación Tradicional en Anma, Shiatsu & Medicina Manual Japonesa</p>
+        <p class="text-[10px] text-stone-500 mt-4 tracking-widest uppercase">Instructor: Gastón Burgos • Lanús Oeste Centro</p>
+    </footer>
+
+</body>
+</html>
