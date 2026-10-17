@@ -22,11 +22,13 @@
         <span class="text-xl font-bold font-kanji text-amber-500">Espacio INYO</span>
         <span class="hidden md:inline text-xs text-stone-400 border-l border-stone-700 pl-3">Anma & Anpuku Tradicional</span>
       </div>
-      <div class="flex items-center gap-4 text-xs font-medium">
-        <a href="#fukushin-intro" class="hover:text-amber-400 transition">Diagnóstico (Fukushin)</a>
-        <a href="#capitulos" class="hover:text-amber-400 transition">Técnicas (1-8)</a>
-        <a href="fukushin.html" class="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1.5 rounded transition font-semibold flex items-center gap-1">
-          <span>📋 Ficha de Práctica</span>
+      <div class="flex items-center gap-3 md:gap-4 text-xs font-medium overflow-x-auto">
+        <a href="cartografia-emocional.html" class="hover:text-amber-400 transition whitespace-nowrap">🌊 Cartografía Dorsal</a>
+        <a href="puntos-shu.html" class="hover:text-amber-400 transition whitespace-nowrap">📍 Puntos Shu</a>
+        <a href="aplicacion-abdomen.html" class="hover:text-amber-400 transition whitespace-nowrap">📖 8 Manos Futón</a>
+        <a href="matriz-clinica.html" class="hover:text-amber-400 transition whitespace-nowrap">📊 Matriz Clínica</a>
+        <a href="fukushin.html" class="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1.5 rounded transition font-semibold flex items-center gap-1 whitespace-nowrap">
+          <span>📋 Ficha Fukushin</span>
         </a>
       </div>
     </div>
@@ -58,25 +60,25 @@
 
       <!-- I. LOS 5 PRINCIPIOS -->
       <div class="space-y-4">
-        <h3 class="text-lg font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">I. Los Cinco Principios Cardinales del Examen Abdominal</h3>
+        <h3 class="text-lg font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">I. Los Cinco Principios Cardinales del Examen Abdominal (五原則)</h3>
         <p class="text-xs text-stone-600">
           Al realizar el examen visual y palpatorio del abdomen (Fukushin — 腹診), el estudiante debe fundamentar su diagnóstico en cinco principios cardinales:
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
           <div class="p-3 bg-stone-50 rounded border border-stone-200">
-            <span class="font-bold text-amber-800">1. Jitsu (Abdomen Fecundo / 実):</span> Piel gruesa, elástica, tono firme e hidratación natural. Sin tensión ni masas. No requiere tratamiento correctivo de Anpuku.
+            <span class="font-bold text-amber-800">1. Jitsu (Abdomen Fecundo / 実):</span> Piel gruesa, elástica, tono firme e hidratación natural. Resistencia armónica sin rigidez reactiva ni masas.
           </div>
           <div class="p-3 bg-stone-50 rounded border border-stone-200">
-            <span class="font-bold text-amber-800">2. Kyo (Abdomen Insustancial / 虚):</span> Piel fina, débil, seca. Cede sin elasticidad ("sensación de vacío"). Requiere contención y calor palmar (On-yū).
+            <span class="font-bold text-amber-800">2. Kyo (Abdomen Insustancial / 虚):</span> Piel fina, fría, deshidratada. Cede sin respuesta elástica ("sensación de vacío" o pozo). Requiere contención, lentitud y calor palmar (On-yū).
           </div>
           <div class="p-3 bg-stone-50 rounded border border-stone-200">
-            <span class="font-bold text-amber-800">3. Dōki (Palpitación Aórtica / 動気):</span> Valora el pulso de la aorta abdominal entre los riñones. Pulso suave indica vitalidad; pulso rápido/violento indica agitación de la mente (Shin).
+            <span class="font-bold text-amber-800">3. Dōki (Palpitación Aórtica / 動気):</span> Valora el pulso de la aorta abdominal entre epigastrio y ombligo. Pulso suave indica equilibrio; pulso rápido o violento indica hiperactividad simpática y agitación del Shen (⚠️ <em>Contraindicada la infiltración profunda</em>).
           </div>
           <div class="p-3 bg-stone-50 rounded border border-stone-200">
-            <span class="font-bold text-amber-800">4. Renkyū / Ijō Kinchō (Tensión Anormal):</span> Contractura defensiva o hipertonía de los músculos rectos u oblicuos. Requiere sedación gradual antes de profundizar.
+            <span class="font-bold text-amber-800">4. Renkyū / Ijō Kinchō (Tensión Anormal / 攣急):</span> Contractura defensiva o hipertonía de los músculos rectos u oblicuos. Exige sedación gradual de bajo umbral antes de profundizar; jamás empujar con fuerza.
           </div>
           <div class="p-3 bg-stone-50 rounded border border-stone-200 md:col-span-2">
-            <span class="font-bold text-amber-800">5. Kekkai / Shikori / Katamari (Masas Abdominales):</span> Acumulaciones por comida (Shokukai), Ki, agua (Suikai) o sangre (Ketsukai). Si se detecta una masa profunda, sólida, fija e indolora de origen indeterminado, derivar a evaluación médica.
+            <span class="font-bold text-amber-800">5. Kekkai / Shikori / Katamari (Masas Abdominales / 結塊):</span> Acumulaciones por comida (Shokutai), Ki, líquidos o sangre (Ketsukai). Diferenciar mediante Pinza en Arco si la masa es móvil (Ju) o fija (Shaku). Si se palpa una masa profunda, pétrea, fija e indolora de origen desconocido, derivar a evaluación médica.
           </div>
         </div>
       </div>
@@ -89,145 +91,193 @@
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">1. Shokuhi no Hara — Abdomen por Estancamiento Digestivo (触脾の腹)</h4>
             <p class="text-amber-800 italic my-1">"Sentir opresión abdominal"</p>
-            <p>Pared abdominal endurecida por alimentos no digeridos (Shokutai) y mala función de Bazo/Estómago. Genera tensión y dolor reflejo en la espalda a la altura de las vértebras <strong>D7 y D9</strong>, además de mareos y dolor sordo.</p>
+            <p>Pared abdominal endurecida por alimentos no digeridos (Shokutai) y disfunción de Bazo/Estómago. Genera tensión y dolor reflejo en la espalda a la altura de las vértebras <strong>D7 y D9 (V17 Diafragma y V18 Hígado)</strong>. Requiere descenso con <em>Ikei no Te</em> tras liberar el dorso.</p>
           </div>
 
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">2. Shakuju no Hara — Abdomen por Masas y Energía Emocional (積聚の腹)</h4>
             <p class="text-amber-800 italic my-1">"La masa del abdomen: SHAKU es inmóvil y JU es móvil"</p>
-            <p>Sensación fluido-acuosa y energía móvil/pulsátil en el <strong>lado izquierdo</strong>. Diferenciación: <em>Shaku</em> (masa fija/Yin) vs. <em>Ju</em> (masa móvil/Yang). Vinculado a ira, enfado o rencor reprimido que genera energía dañina (Jaki).</p>
+            <p>Sensación fluido-acuosa y energía móvil/pulsátil en el <strong>flanco izquierdo</strong>. Diferenciación: <em>Shaku</em> (masa fija/Yin) vs. <em>Ju</em> (masa móvil/Yang). Vinculado a ira, enfado o rencor reprimido que genera estancamiento de Qi de Hígado.</p>
           </div>
 
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">3. Kurou no Hara — Abdomen por Sufrimiento del Corazón y Cansancio (苦労の腹)</h4>
             <p class="text-amber-800 italic my-1">"Un abdomen que está sufriendo del corazón por cansancio"</p>
-            <p>Masa endurecida romboidal/triangular desde el epigastrio alto hacia el <strong>reborde costal izquierdo</strong> (Estómago/Bazo). Refleja agotamiento del Kokoro por sobreexigencia mental, preocupación crónica, insomnio y fatiga.</p>
+            <p>Masa endurecida romboidal/triangular desde el epigastrio alto hacia el <strong>reborde costal izquierdo</strong> (Estómago/Bazo). Refleja agotamiento del Kokoro por sobreexigencia mental, preocupación crónica, insomnio y fatiga. Indicación absoluta de <em>Kyori no Te</em>.</p>
           </div>
 
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">4. Nanji no Hara — Abdomen de Difícil Curación (難治の腹)</h4>
             <p class="text-amber-800 italic my-1">"Un abdomen que es difícil de curar"</p>
-            <p>Masa o rigidez densa que asciende desde el centro del vientre hasta la base del esternón (apéndice xifoides) y se mantiene inmóvil bajo palpación (Shaku consolidado). Requiere intervenciones prudentes, graduales y sin violencia física.</p>
+            <p>Masa o rigidez densa que asciende por la línea media desde el vientre central hasta el apéndice xifoides (Shaku consolidado). Requiere intervenciones prudentes, graduales y limitadas al plano fascial superficial.</p>
           </div>
 
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">5. Kekkai no Hara — Abdomen con Coágulo o Estasis de Sangre (血塊の腹)</h4>
             <p class="text-amber-800 italic my-1">"Un abdomen con un coágulo de sangre"</p>
-            <p>Masa fija en el hipogastrio. En la mujer indica estasis sanguínea pélvica o trastornos ginecológicos (Ketsukai). En el hombre se manifiesta con dolor agudo o referido en caderas, ingles e hipogastrio.</p>
+            <p>Masa fija en el hipogastrio y fosas ilíacas. En mujeres indica estasis sanguínea pélvica o afección ginecológica (Ketsukai). En hombres se manifiesta con dolor reflejo en ingles y caderas. Correlaciona con tensión dorsal baja en <strong>L4 a S2</strong>.</p>
           </div>
 
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">6. Kyojin no Hara — Abdomen por Vacío Extremo y Extenuación (虚尽の腹)</h4>
             <p class="text-amber-800 italic my-1">"Un abdomen con sensación de vacío"</p>
-            <p>Pérdida generalizada de tono muscular; piel fría, seca o áspera. Tórax elevado por compensación respiratoria. Signo claro de extenuación profunda de Ki.</p>
+            <p>Pérdida generalizada de tono parietal; piel fría, atónica o seca. Tórax elevado por compensación respiratoria apical. Signo de extenuación profunda de Ki. Contraindicada toda maniobra dispersiva rápida.</p>
           </div>
 
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
             <h4 class="font-bold text-stone-900 text-sm font-kanji">7. Kakke no Hara — Abdomen por Entumecimiento o Beriberi (脚気の腹)</h4>
-            <p class="text-amber-800 italic my-1">"Abdomen con beri beri"</p>
-            <p>Pérdida de sensibilidad táctil, parestesia o acartonamiento de la piel por debajo de la línea del ombligo. Refleja deficiencia de conducción de Ki y Sangre hacia las extremidades inferiores.</p>
+            <p class="text-amber-800 italic my-1">"Abdomen con entumecimiento"</p>
+            <p>Pérdida de sensibilidad táctil, hipoestesia o acartonamiento tisular por debajo del ombligo. Refleja deficiencia de conducción de Ki/Sangre hacia miembros inferiores. Exige contención térmica prolongada.</p>
           </div>
         </div>
       </div>
 
+      <!-- PUENTE CLÍNICO: ESPALDA - ABDOMEN -->
+      <div class="bg-amber-50 p-5 rounded-lg border border-amber-300 space-y-2">
+        <h3 class="font-bold text-amber-950 text-sm flex items-center gap-2">
+          <span>⚡ El Puente Fisiológico: Liberación Dorsal Previa al Anpuku</span>
+        </h3>
+        <p class="text-xs text-amber-900 leading-relaxed">
+          En la metodología tradicional de Espacio INYO, el abdomen jamás se aborda de manera aislada. La caja torácica posterior y el borde escapular albergan la cadena simpática y los puntos de las 5 Entidades Espirituales (<strong>V42 a V47</strong>). Si la musculatura dorsal interescapular y los puntos Shu de Diafragma (<strong>V17</strong>) e Hígado (<strong>V18</strong>) están bloqueados, la pared abdominal anterior reacciona con resistencia refleja y defensa miotática. Tratar primero la espalda libera el diafragma y permite que las 8 manos de Anpuku penetren con suavidad y efectividad clínica.
+        </p>
+      </div>
+
       <!-- ACCESO DIRECTO A LA FICHA DE PRÁCTICA -->
-      <div class="bg-amber-50 p-4 rounded-lg border border-amber-200 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="text-xs text-amber-900">
-          <span class="font-bold block text-sm">¿Vas a realizar la práctica en clase?</span>
-          Utiliza la ficha interactiva e imprimible con los gráficos para tomar notas en vivo.
+      <div class="bg-stone-100 p-4 rounded-lg border border-stone-300 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-xs text-stone-700">
+          <span class="font-bold block text-sm text-stone-900">¿Vas a realizar la práctica clínica en futón?</span>
+          Utiliza la bitácora imprimible para asentar los hallazgos de los 5 principios y cartografía.
         </div>
-        <a href="fukushin.html" class="bg-amber-800 hover:bg-amber-900 text-white text-xs font-semibold px-4 py-2 rounded transition whitespace-nowrap">
-          Abrir Ficha de Fukushin (PDF) →
-        </a>
+        <div class="flex gap-2">
+          <a href="cartografia-emocional.html" class="bg-stone-800 hover:bg-stone-900 text-white text-xs font-semibold px-4 py-2 rounded transition whitespace-nowrap">
+            Cartografía Dorsal →
+          </a>
+          <a href="fukushin.html" class="bg-amber-700 hover:bg-amber-800 text-white text-xs font-semibold px-4 py-2 rounded transition whitespace-nowrap">
+            Ficha Fukushin (PDF) →
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- SECCIÓN DE CAPÍTULOS TÉCNICOS -->
     <section id="capitulos" class="space-y-12">
-      <div class="border-b-2 border-stone-900 pb-2">
-        <span class="text-xs font-bold text-amber-800 uppercase tracking-widest">Protocolo de Manipulaciones</span>
-        <h2 class="text-2xl md:text-3xl font-bold text-stone-900 font-kanji">Capítulos de Aplicación Técnica (Paso a Paso)</h2>
+      <div class="border-b-2 border-stone-900 pb-2 flex justify-between items-end">
+        <div>
+          <span class="text-xs font-bold text-amber-800 uppercase tracking-widest">Protocolo de Manipulaciones</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900 font-kanji">Capítulos de Aplicación Técnica (Paso a Paso)</h2>
+        </div>
+        <a href="aplicacion-abdomen.html" class="text-xs text-amber-700 font-bold hover:underline mb-1">Ver versión 8 pasos imprimible →</a>
       </div>
 
       <!-- CAPÍTULO 1 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 1: Kyori no Te (La Mano de Kori)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 1: Kyori no Te (La Mano de Kori)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">巨里の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
           <p><strong>I. Fundamentos e Historia:</strong> Se dirige al Kokoro (心), unificando corazón físico, mente y emociones. Define la vía para "entender la verdad y la mentira de la persona" examinando el latido de Kori. Calma la energía de la mente (Shin) y apacigua el espíritu.</p>
           <p><strong>II. Anatomía Sutil:</strong> Hipocondrio izquierdo y epigastrio alto. Conecta con el centro de resonancia del pecho y plexo solar alto.</p>
-          <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la izquierda del paciente en <em>Tate-hiza</em> o <em>Seiza</em>. Mano izquierda (infiltración) por debajo de las costillas izquierdas orientada hacia el epigastrio; mano derecha (contención) sobre la superficie costal izquierda. En exhalación, infiltra dedos izquierdos para escuchar el latido de Kori durante 1-2 minutos.</p>
-          <p><strong>IV. Diagnóstico:</strong> Si el tórax está rígido, prioriza el calor de la mano derecha antes de infiltrar la izquierda.</p>
+          <p><strong>III. Biomecánica y Protocolo en Futón:</strong> Arrodíllate a la izquierda del paciente en <em>Tate-hiza</em> o <em>Seiza</em>. Proyecta la presión desde el centro de gravedad corporal (<em>Tanden</em>) manteniendo hombros relajados y codos desbloqueados; jamás empujar con fuerza muscular de brazos. Mano izquierda (infiltración) por debajo de las costillas izquierdas orientada hacia el epigastrio; mano derecha (contención) plana sobre la parrilla costal izquierda. En exhalación, infiltra dedos izquierdos mediante peso corporal para escuchar el latido durante 1-2 minutos.</p>
+          <p><strong>IV. Diagnóstico Clínico:</strong> Si el tórax está rígido, prioriza el calor de la mano derecha antes de infiltrar la izquierda.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 2 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 2: Migi no Kyoukotsu no Te (La Mano del Esternón Derecho)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 2: Migi no Kyoukotsu no Te (La Mano del Esternón Derecho)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">右胸骨の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
           <p><strong>I. Fundamentos e Historia:</strong> Basado en el principio de <em>Funhai</em> (払排 — barrer/dispersar). Moviliza el estancamiento (Ketsu-yū) y expulsa energía dañina (Jaki) en los espacios intercostales derechos. Trazo estrictamente unidireccional desde el esternón hacia la espalda.</p>
           <p><strong>II. Anatomía Sutil:</strong> Espacios intercostales derechos. Cruza canales de Riñón, Estómago, Vesícula Biliar y puntos Shu del dorso.</p>
-          <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la derecha en <em>Tate-hiza</em>. Mano izquierda activa (peine intercostal) y mano derecha pasiva en epigastrio/cresta ilíaca izquierda. Desliza las yemas durante la exhalación desde el esternón hacia la espalda. Retorna siempre por el aire.</p>
+          <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la derecha en <em>Tate-hiza</em>. Mano izquierda activa (peine intercostal) y mano derecha pasiva en epigastrio/cresta ilíaca izquierda. Desliza las yemas durante la exhalación desde el esternón hacia la espalda. Retorna siempre por el aire sin fricción retrógrada.</p>
           <p><strong>IV. Diagnóstico:</strong> Ante rigidez (Kyōkyō Kanku), disminuye la velocidad y aumenta el calor palmar sin forzar.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 3 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 3: Hidari Rokkotsu no Te (La Mano de la Costilla Izquierda)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 3: Hidari Rokkotsu no Te (La Mano de la Costilla Izquierda)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">左肋骨の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
-          <p><strong>I. Fundamentos e Historia:</strong> Dispersión (Funhai) en el hemitórax izquierdo. <em>Regla de Exclusión:</em> Si se aplicó Kyori no Te (Cap. 1), NO se realiza esta técnica. Si no se aplicó Cap. 1, se ejecuta con total libertad.</p>
-          <p><strong>II. Anatomía Sutil:</strong> Espacios intercostales izquierdos, estrictamente por debajo de la línea del pezón (puntos Qimen H 14, Dabao BP 21).</p>
-          <p><strong>III. Protocolo en Futón:</strong> En mujeres, pedir a la paciente que eleve suavemente la mama izquierda con su mano para despejar la zona. Deslizar yemas en exhalación desde el esternón hacia el lateral con retorno aéreo.</p>
+          <p><strong>I. Fundamentos e Historia:</strong> Dispersión dinámica (Funhai) en el hemitórax izquierdo. <em>Regla de Exclusión Inviolable:</em> Si se aplicó Kyori no Te (Cap. 1), <strong>NO se realiza esta técnica</strong> para no quebrar la calma alcanzada. Si se omitió el Cap. 1, se ejecuta como técnica principal de apertura.</p>
+          <p><strong>II. Anatomía Sutil y Encuadre Ético:</strong> Espacios intercostales izquierdos, estrictamente por debajo de la línea del pezón (puntos Qimen H 14, Dabao BP 21). En pacientes mujeres, solicitar que eleven suavemente su mama con su propia mano para despejar las costillas.</p>
+          <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la izquierda. Deslizar yemas en exhalación desde el esternón hacia el flanco lateral con retorno aéreo suave.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 4 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 4: Ikei no Te (La Mano del Meridiano de Estómago)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 4: Ikei no Te (La Mano del Meridiano de Estómago)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">胃経の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
-          <p><strong>I. Fundamentos e Historia:</strong> Restablece el flujo descendente del Ki del Estómago (I-ki wa kōsu) para pacificar la ansiedad y la opresión gástrica.</p>
-          <p><strong>II. Anatomía Sutil:</strong> Franja del meridiano de estómago (2 cun laterales de la línea media) desde el pecho bajo hasta Shinketsu (ombligo / Ren 8).</p>
-          <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la derecha. Movimiento de "ola alternada" de palmas relajadas descendiendo desde el pecho hasta el ombligo en exhalación. Límite estricto: no bajar del ombligo.</p>
+          <p><strong>I. Fundamentos e Historia:</strong> Restablece el flujo descendente fisiológico del Ki de Estómago (<em>I-ki wa kōsu</em>) para pacificar la ansiedad, la plenitud torácica y la opresión epigástrica.</p>
+          <p><strong>II. Anatomía Sutil:</strong> Franja del meridiano de estómago (a 2 cun laterales de la línea media) desde el pecho inferior hasta Shinketsu (ombligo / Ren 8).</p>
+          <p><strong>III. Protocolo en Futón:</strong> Arrodíllate a la derecha. Movimiento rítmico de "ola alternada" de palmas relajadas descendiendo desde el pecho hasta el ombligo en exhalación continua, emitiendo calor desde Rōkyū. <em>Límite Anatómico Estricto:</em> La palma jamás debe cruzar hacia abajo la línea horizontal del ombligo.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 5 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 5: Funhai no Te (La Mano de Dispersión Subcostal)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 5: Funhai no Te (La Mano de Dispersión Subcostal)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">払排の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
-          <p><strong>I. Fundamentos e Historia:</strong> Barrido divergente para liberar la plenitud subcostal (Kyōkyō Kanku) y descongestionar el diafragma.</p>
-          <p><strong>II. Anatomía Sutil:</strong> Desde Kyuubi Ketsu (Ren 14 / epigastrio) bordeando el arco costal hasta Shoumon Ketsu (H 13 / 11ª costilla flotante).</p>
-          <p><strong>III. Protocolo en Futón:</strong> Trazo alternado en abanico (derecha / izquierda) bordeando el margen inferior del cartílago costal durante la exhalación.</p>
+          <p><strong>I. Fundamentos e Historia:</strong> Barrido divergente y bilateral para liberar la plenitud subcostal (Kyōkyō Kanku) y descongestionar la cúpula diafragmática.</p>
+          <p><strong>II. Anatomía Sutil:</strong> Desde Kyuubi Ketsu (Ren 14 / epigastrio) bordeando los márgenes costales hacia Shoumon Ketsu (H 13 / 11ª costilla flotante).</p>
+          <p><strong>III. Protocolo en Futón:</strong> Trazo divergente alternado en abanico (primero hemitórax derecho, luego izquierdo) recorriendo el margen subcostal durante la exhalación. La presión viaja tangencialmente sin chocar perpendicularmente contra el hueso costal.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 6 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 6: Kyuubi no Te (La Mano de Kyuubi)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 6: Kyuubi no Te (La Mano de Kyuubi)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">鳩尾の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
-          <p><strong>I. Fundamentos e Historia:</strong> Infiltración progresiva en el centro del epigastrio para evaluar y disolver la plenitud (Jitsu) del plexo solar.</p>
-          <p><strong>II. Anatomía Sutil:</strong> Kyuubi Ketsu (Ren 14 / Juque), punto Mu de Corazón.</p>
-          <p><strong>III. Protocolo en Futón:</strong> Triple Alianza de la mano derecha respaldada por la mano izquierda. Infiltración en 2 niveles: 12,12 mm (~4 Bu / fascial) y 18,18 mm (~6 Bu / profundo visceral) en exhalación sostenida.</p>
+          <p><strong>I. Fundamentos e Historia:</strong> Infiltración perpendicular precisa en el centro del epigastrio para evaluar y disolver la plenitud (Jitsu) del plexo solar y calmar la raíz de Corazón.</p>
+          <p><strong>II. Anatomía Sutil:</strong> Kyuubi Ketsu (Ren 14 / Juque), punto Mu ventral de Corazón.</p>
+          <p><strong>III. Gradación por Planos Tisulares:</strong> Posición de "Triple Alianza" de la mano derecha reforzada sobre el dorso por la mano izquierda. Infiltración progresiva durante la exhalación en dos planos:</p>
+          <ul class="pl-3 space-y-1">
+            <li>• <strong>Nivel 1 (Fascial / Superficial — Trad. 4 Bu):</strong> Infiltración suave que acompaña la exhalación venciendo la piel y fascia superficial; fase diagnóstica y de escucha aórtica.</li>
+            <li>• <strong>Nivel 2 (Profundo / Visceral — Trad. 6 Bu):</strong> Contacto con la resistencia retroperitoneal profunda sin rebote elástico. Se alcanza únicamente si el receptor exhala relajado y libre de espasmos defensivos.</li>
+          </ul>
+          <p><strong>IV. Nota de Seguridad Inviolable:</strong> Si se percibe pulso aórtico violento o acelerado (<em>Dōki</em>), está <strong>terminantemente prohibido profundizar a Nivel 2</strong>; mantener el apoyo en superficie o suspender la presión puntual.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 7 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 7: Fuyou no Te (La Mano de Fuyou)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 7: Fuyou no Te (La Mano de Fuyou)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">不容の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
-          <p><strong>I. Fundamentos e Historia:</strong> Evaluación de la respiración diafragmática y dispersión de masas abdominales (Shakuju: Shaku fijo / Ju móvil).</p>
-          <p><strong>II. Anatomía Sutil:</strong> Fuyou Ketsu (Estómago 21 / E 21) en la intersección del meridiano de estómago con el arco costal.</p>
-          <p><strong>III. Protocolo en Futón:</strong> Utiliza la Pinza en Arco (índice/corazón en un lado, pulgar en el opuesto) o Triple Alianza. Presión sostenida en exhalación para disolver el estancamiento.</p>
+          <p><strong>I. Fundamentos e Historia:</strong> Evaluación y disolución de masas abdominales (<em>Shakuju</em>). Diferencia masas estables (Shaku fijo / Yin) de masas dispersables (Ju móvil / Yang) y desobstruye el píloro.</p>
+          <p><strong>II. Anatomía Sutil:</strong> Fuyou Ketsu (E 21 / Liangmen alto) en el borde costal donde emerge el meridiano de estómago.</p>
+          <p><strong>III. Protocolo en Futón:</strong> Emplea la "Pinza en Arco" (índice y medio por un lado, pulgar por el opuesto) o Triple Alianza. Penetra suavemente en exhalación sosteniendo la presión estacionaria hasta notar el reblandecimiento del tejido. Jamás intentar aplastar con fuerza una masa dura e inmóvil.</p>
         </div>
       </article>
 
       <!-- CAPÍTULO 8 -->
       <article class="bg-white p-8 rounded-xl shadow-sm border border-stone-200 space-y-4">
-        <h3 class="text-xl font-bold text-stone-900 font-kanji border-b border-stone-200 pb-2">Capítulo 8: Koukyuu no Te (La Mano de Koukyuu)</h3>
+        <div class="flex justify-between items-baseline border-b border-stone-200 pb-2">
+          <h3 class="text-xl font-bold text-stone-900 font-kanji">Capítulo 8: Koukyuu no Te (La Mano de Koukyuu)</h3>
+          <span class="text-xs font-bold text-amber-800 font-kanji">拘急の手</span>
+        </div>
         <div class="text-xs space-y-3 text-stone-700">
-          <p><strong>I. Fundamentos e Historia:</strong> Pacificación de convulsiones o espasmos abdominales. <em>Regla de Oro:</em> "No es bueno presionar muy fuerte".</p>
-          <p><strong>II. Anatomía Sutil:</strong> Desde el pecho bajo hasta Tensū Ketsu (E 25 / ombligo lateral).</p>
-          <p><strong>III. Protocolo en Futón:</strong> Descenso blando, alternado y continuo de palmas templadas para desactivar el reflejo miotático y calmar la hipertonía.</p>
+          <p><strong>I. Fundamentos e Historia:</strong> Sedación de estados de hipertonía (<em>Renkyū</em>), fasciculaciones musculares o espasmos reflejos del vientre.</p>
+          <p><strong>II. Regla de Oro Inviolable:</strong> <em>"No es bueno presionar muy fuerte"</em>. La fuerza invasiva activa el reflejo miotático defensivo, empeorando el espasmo.</p>
+          <p><strong>III. Anatomía Sutil:</strong> Franja rectilínea desde el hipocondrio inferior hasta Tensū Ketsu (E 25 / línea paraumbilical).</p>
+          <p><strong>IV. Protocolo en Futón:</strong> Deslizamiento blando, continuo, envolvente y alternado de ambas palmas bien tibias. Estímulo de muy bajo umbral para activar la respuesta parasimpática y apaciguar el sistema nervioso.</p>
         </div>
       </article>
     </section>
@@ -236,32 +286,43 @@
 
   <!-- FOOTER UNIFICADO DE ESPACIO INYO -->
   <footer class="bg-stone-900 text-stone-400 py-10 border-t border-stone-800 text-xs">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
         <h4 class="text-amber-500 font-bold font-kanji text-sm mb-2">Espacio INYO</h4>
-        <p class="leading-relaxed">Centro de desarrollo corporal, artes marciales tradicionales y terapias manuales japonesas.</p>
+        <p class="leading-relaxed">Centro de enseñanza e instrucción profesional en Terapias Manuales Japonesas, Movimiento Consciente, Artes Marciales Tradicionales y Desarrollo Holístico.</p>
+        <p class="text-[10px] text-stone-500 mt-2">Lanús Oeste Centro • Director: Gastón Burgos</p>
       </div>
       <div>
-        <h4 class="text-stone-200 font-bold mb-2 uppercase tracking-wider">Disciplinas & Webs</h4>
+        <h4 class="text-stone-200 font-bold mb-2 uppercase tracking-wider">Módulos del Curso</h4>
         <ul class="space-y-1">
-          <li>• HIIT + Calistenia</li>
-          <li>• Zen Stretching</li>
-          <li>• Artes Marciales Kiryū Dōjō</li>
-          <li>• Yoga (Hatha & Meditación)</li>
-          <li>• Qigong (Profe Alejandra Paz)</li>
-          <li>• Chamanismo (Ignacio Digas)</li>
+          <li><a href="index.html" class="text-amber-400 hover:underline">Manual Teórico General</a></li>
+          <li><a href="cartografia-emocional.html" class="hover:text-amber-400">Cartografía Dorsal (3 Cun)</a></li>
+          <li><a href="puntos-shu.html" class="hover:text-amber-400">Puntos Shu de Espalda (1,5 Cun)</a></li>
+          <li><a href="aplicacion-abdomen.html" class="hover:text-amber-400">8 Manos Anpuku en Futón</a></li>
+          <li><a href="fukushin.html" class="hover:text-amber-400">Bitácora de Fukushin (PDF)</a></li>
+          <li><a href="matriz-clinica.html" class="hover:text-amber-400">Matriz Clínica & Contraindicaciones</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-stone-200 font-bold mb-2 uppercase tracking-wider">Recursos de Estudio</h4>
+        <h4 class="text-stone-200 font-bold mb-2 uppercase tracking-wider">Movimiento & Artes</h4>
         <ul class="space-y-1">
-          <li><a href="index.html" class="text-amber-400 hover:underline">Manual Teórico Anma & Anpuku</a></li>
-          <li><a href="fukushin.html" class="text-amber-400 hover:underline">Ficha Imprimible de Fukushin (PDF)</a></li>
+          <li><a href="../calistenia/index.html" class="hover:text-amber-400">HIIT + Calistenia</a></li>
+          <li><a href="../zen-stretching/index.html" class="hover:text-amber-400">Zen Stretching</a></li>
+          <li><a href="../bujinkan/index.html" class="hover:text-amber-400">Kiryū Dōjō (Bujinkan)</a></li>
+          <li><a href="../yoga/index.html" class="hover:text-amber-400">Yoga (Belén González)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-stone-200 font-bold mb-2 uppercase tracking-wider">Disciplinas Conectadas</h4>
+        <ul class="space-y-1">
+          <li><a href="../qigong/index.html" class="hover:text-amber-400 text-amber-300 font-medium">Qigong (Profe Alejandra Paz)</a></li>
+          <li><a href="../chamanismo/index.html" class="hover:text-amber-400 text-amber-300 font-medium">Chamanismo (Ignacio Digas)</a></li>
+          <li><a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-amber-400">Web Masaje Japonés Base</a></li>
         </ul>
       </div>
     </div>
     <div class="text-center mt-8 pt-6 border-t border-stone-800 text-stone-500">
-      © 2026 Espacio INYO — Todos los derechos reservados.
+      © 2026 Espacio INYO. Todos los derechos reservados.
     </div>
   </footer>
 
