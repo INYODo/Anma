@@ -27,16 +27,20 @@
 
   <!-- BARRA DE NAVEGACIÓN Y BOTÓN DE IMPRESIÓN (no-print) -->
   <div class="no-print bg-stone-900 text-stone-100 py-3 px-6 sticky top-0 z-50 flex justify-between items-center shadow-md">
-    <div class="flex items-center gap-4 text-xs font-medium">
-      <a href="index.html" class="text-amber-400 hover:underline flex items-center gap-1">
-        ← Manual Teórico (index.html)
-      </a>
+    <div class="flex items-center gap-3 text-xs font-medium overflow-x-auto">
+      <a href="index.html" class="text-amber-400 hover:underline whitespace-nowrap">← Manual Teórico</a>
       <span class="text-stone-600">|</span>
-      <a href="fukushin.html" class="text-stone-300 hover:text-amber-400 transition">
-        📋 Ficha de Fukushin
-      </a>
+      <a href="cartografia-emocional.html" class="text-stone-300 hover:text-amber-400 whitespace-nowrap">🌊 Cartografía Dorsal</a>
+      <span class="text-stone-600">|</span>
+      <a href="aplicacion-abdomen.html" class="text-stone-300 hover:text-amber-400 whitespace-nowrap">📖 8 Manos Anpuku</a>
+      <span class="text-stone-600">|</span>
+      <a href="fukushin.html" class="text-stone-300 hover:text-amber-400 whitespace-nowrap">📋 Ficha Fukushin</a>
+      <span class="text-stone-600">|</span>
+      <span class="text-amber-400 font-bold whitespace-nowrap">📊 Matriz Clínica</span>
+      <span class="text-stone-600">|</span>
+      <a href="puntos-shu.html" class="text-stone-300 hover:text-amber-400 whitespace-nowrap">📍 Puntos Shu</a>
     </div>
-    <button onclick="window.print()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded-full shadow transition flex items-center gap-2">
+    <button onclick="window.print()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded-full shadow transition flex items-center gap-2 whitespace-nowrap">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
       Imprimir / Guardar Matriz (PDF)
     </button>
@@ -124,7 +128,7 @@
             </div>
             <div class="bg-rose-50 border border-rose-200 p-3 rounded">
               <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
-              <p class="text-rose-800">Presión perpendicular profunda sobre la aorta (Nivel 2 de Kyuubi no Te / Cap. 6). Irrita el plexo celiaco; mantener la presión en Nivel 1 (12,12 mm) o en la superficie.</p>
+              <p class="text-rose-800">Presión perpendicular profunda sobre la aorta abdominal (Nivel 2 de Kyuubi no Te / Cap. 6). Irrita el plexo celíaco; mantener la presión en <strong>Nivel 1 (plano fascial superficial / Trad. 4 Bu)</strong> o suspender la presión puntual.</p>
             </div>
           </div>
         </article>
@@ -135,11 +139,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div class="bg-emerald-50 border border-emerald-200 p-3 rounded">
               <span class="font-bold text-emerald-900 uppercase block mb-1">✓ Recomendable Aplicar:</span>
-              <p class="text-emerald-800">Sedación gradual de bajo umbral: <strong>Koukyuu no Te (Cap. 8)</strong> es la maniobra principal ante hipertonía muscular, combinada con deslices de <strong>Ikei no Te (Cap. 4)</strong>.</p>
+              <p class="text-emerald-800">Sedación gradual de bajo umbral: <strong>Koukyuu no Te (Cap. 8)</strong> es la maniobra principal ante hipertonía muscular, combinada con deslices suaves de <strong>Ikei no Te (Cap. 4)</strong>.</p>
             </div>
             <div class="bg-rose-50 border border-rose-200 p-3 rounded">
               <span class="font-bold text-rose-900 uppercase block mb-1">✕ Omitir / Contraindicado:</span>
-              <p class="text-rose-800">Presiones puntuales secas o punzantes. Recordar la Regla de Oro: "No es bueno presionar muy fuerte", ya que gatilla el reflejo miotático defensivo y agrava el espasmo.</p>
+              <p class="text-rose-800">Presiones puntuales secas o punzantes. Recordar la Regla de Oro: "No es bueno presionar muy fuerte", ya que gatilla el reflejo miotático defensivo y agrava el espasmo parietal.</p>
             </div>
           </div>
         </article>
@@ -162,7 +166,7 @@
       </div>
     </section>
 
-    <!-- SECCIÓN II: MATRIZ VISUAL DE LOS MAPAS DEL HARA CON IMÁGENES .PNG -->
+    <!-- SECCIÓN II: MATRIZ VISUAL DE LOS MAPAS DEL HARA -->
     <section class="mb-10 space-y-6">
       <h2 class="text-xl font-bold text-stone-900 border-b-2 border-stone-800 pb-2 flex items-center justify-between">
         <span>II. Matriz Visual de Abordaje Según los Mapas del Hara</span>
@@ -180,13 +184,14 @@
             </div>
             <div class="md:col-span-2 space-y-2 text-xs">
               <h3 class="font-bold text-stone-900 text-sm font-kanji">1. Shokuhi no Hara (Estancamiento Digestivo)</h3>
+              <p class="text-stone-600 text-[11px]"><em>Puente Dorsal:</em> Correlaciona con dolor y contractura refleja en vértebras D7 a D9 (V17 Diafragma y V18 Hígado). Liberar el dorso antes de drenar el abdomen.</p>
               <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
                 <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
-                <p class="text-emerald-800"><strong>Ikei no Te (Cap. 4)</strong> para descender la plenitud, <strong>Fuyou no Te (Cap. 7)</strong> para desbloquear la zona gástrica y <strong>Funhai no Te (Cap. 5)</strong> para barrer los arcos costales.</p>
+                <p class="text-emerald-800"><strong>Ikei no Te (Cap. 4)</strong> para descender la plenitud gástrica, <strong>Fuyou no Te (Cap. 7)</strong> para desobstruir el píloro y <strong>Funhai no Te (Cap. 5)</strong> para barrer los hipocondrios.</p>
               </div>
               <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
                 <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
-                <p class="text-rose-800">No sobrepasar hacia abajo la línea del ombligo durante Ikei no Te. Evitar presiones secas o punzantes en la región epigástrica rígida.</p>
+                <p class="text-rose-800">No sobrepasar hacia abajo la línea horizontal del ombligo durante Ikei no Te. Evitar presiones secas o punzantes en la región epigástrica rígida.</p>
               </div>
             </div>
           </div>
@@ -245,7 +250,7 @@
               <h3 class="font-bold text-stone-900 text-sm font-kanji">4. Nanji no Hara (Abdomen de Difícil Curación / Masa Esternal)</h3>
               <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
                 <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
-                <p class="text-emerald-800"><strong>Kyori no Te (Cap. 1)</strong> en contención, <strong>Kyuubi no Te (Cap. 6)</strong> limitado estrictamente a Nivel 1 (~12,12 mm / fascial) y <strong>Fuyou no Te (Cap. 7)</strong> sostenido.</p>
+                <p class="text-emerald-800"><strong>Kyori no Te (Cap. 1)</strong> en contención, <strong>Kyuubi no Te (Cap. 6)</strong> limitado estrictamente a <strong>Nivel 1 (plano fascial superficial / Trad. 4 Bu)</strong> y <strong>Fuyou no Te (Cap. 7)</strong> sostenido.</p>
               </div>
               <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
                 <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
@@ -264,6 +269,7 @@
             </div>
             <div class="md:col-span-2 space-y-2 text-xs">
               <h3 class="font-bold text-stone-900 text-sm font-kanji">5. Kekkai no Hara (Estasis de Sangre en Hipogastrio)</h3>
+              <p class="text-stone-600 text-[11px]"><em>Puente Dorsal:</em> Revisar tensión refleja en charnela lumbosacra (L4 a S2 / Puntos Shu de Intestino Grueso y Vejiga).</p>
               <div class="bg-emerald-50 border border-emerald-200 p-2.5 rounded">
                 <span class="font-bold text-emerald-900 block mb-0.5">✓ Recomendable Aplicar:</span>
                 <p class="text-emerald-800"><strong>Ikei no Te (Cap. 4)</strong> para promover el descenso vascular, <strong>Kyori no Te (Cap. 1)</strong> y <strong>Fuyou no Te (Cap. 7)</strong> para liberar el abdomen medio.</p>
@@ -291,7 +297,7 @@
               </div>
               <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
                 <span class="font-bold text-rose-900 block mb-0.5">✕ Omitir / Contraindicado:</span>
-                <p class="text-rose-800">TODAS las técnicas de Funhai (Cap. 2, Cap. 3 y Cap. 5) están strictly contraindicadas. Omitir Nivel 2 de Kyuubi no Te.</p>
+                <p class="text-rose-800">TODAS las técnicas de Funhai (Cap. 2, Cap. 3 y Cap. 5) están estrictamente contraindicadas. Omitir Nivel 2 de Kyuubi no Te.</p>
               </div>
             </div>
           </div>
@@ -357,15 +363,25 @@
 
   <!-- FOOTER WEB ESPACIO INYO (no-print) -->
   <footer class="no-print bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-xs mt-12">
-    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
         <span class="text-amber-500 font-bold font-kanji text-sm block">Espacio INYO</span>
-        <span>Conexión de contenidos: HIIT + Calistenia, Zen Stretching, Kiryū Dōjō, Yoga, Qigong y Chamanismo.</span>
+        <span class="text-stone-400 block text-[11px] mt-1">Ecosistema de actividades: HIIT + Calistenia, Zen Stretching, Artes Marciales Kiryū Dōjō, Yoga, Qigong y Chamanismo.</span>
       </div>
-      <div class="flex gap-4">
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-[11px]">
         <a href="index.html" class="text-amber-400 hover:underline font-semibold">Manual Teórico</a>
         <span class="text-stone-700">•</span>
-        <a href="fukushin.html" class="text-amber-400 hover:underline font-semibold">Ficha de Fukushin</a>
+        <a href="cartografia-emocional.html" class="text-amber-400 hover:underline font-semibold">Cartografía Dorsal</a>
+        <span class="text-stone-700">•</span>
+        <a href="aplicacion-abdomen.html" class="text-amber-400 hover:underline font-semibold">8 Manos Anpuku</a>
+        <span class="text-stone-700">•</span>
+        <a href="fukushin.html" class="text-amber-400 hover:underline font-semibold">Ficha Fukushin</a>
+        <span class="text-stone-700">•</span>
+        <a href="puntos-shu.html" class="text-amber-400 hover:underline font-semibold">Puntos Shu</a>
+        <span class="text-stone-700">•</span>
+        <a href="../qigong/index.html" class="text-stone-300 hover:text-amber-400">Qigong (Alejandra Paz)</a>
+        <span class="text-stone-700">•</span>
+        <a href="../chamanismo/index.html" class="text-stone-300 hover:text-amber-400">Chamanismo (Ignacio Digas)</a>
       </div>
     </div>
   </footer>
