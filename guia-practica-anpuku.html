@@ -4,7 +4,7 @@
     <script>
     if (sessionStorage.getItem('acceso_inyo') !== 'autorizado') {
         document.documentElement.style.display = 'none';
-        window.location.href = 'https://inyodo.github.io/Shiatsu-Namikoshi-Modulos/index.html';
+        window.location.href = 'https://inyodo.github.io/Anma/';
     }
 </script>
 
@@ -33,7 +33,7 @@
         }
         .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        .instruction-block { border-left: 4px solid #b45309; padding-left: 1.25rem; margin: 1.25rem 0; font-size: 0.92rem; }
+        .instruction-block { border-left: 4px solid #b45309; padding-left: 1.25rem; margin: 1.5rem 0; font-size: 0.92rem; }
         .badge-step { background: #b45309; color: white; padding: 3px 14px; font-size: 11px; font-weight: bold; border-radius: 2px; display: inline-block; letter-spacing: 0.15em; }
     </style>
 </head>
@@ -42,16 +42,24 @@
     <!-- Navegación Superior -->
     <nav class="bg-stone-900 border-b border-stone-800 text-stone-300 py-3 px-6 text-xs italic sticky top-0 z-50">
         <div class="max-w-5xl mx-auto flex justify-between items-center overflow-x-auto gap-4">
-            <div class="flex items-center gap-4 whitespace-nowrap">
-                <a href="index.html" class="hover:text-amber-400 transition flex items-center gap-1.5 font-semibold text-amber-500">
-                    <i class="fas fa-arrow-left"></i> Manual Teórico
+            <div class="flex items-center gap-3 whitespace-nowrap">
+                <a href="https://inyodo.github.io/Anma/" class="hover:text-amber-400 transition flex items-center gap-1.5 font-semibold text-amber-500">
+                    <i class="fas fa-arrow-left"></i> Manual Anma
                 </a>
                 <span class="text-stone-700">|</span>
-                <a href="cartografia-emocional.html" class="hover:text-amber-400 transition">🌊 Cartografía Dorsal</a>
+                <a href="https://inyodo.github.io/masaje-japones-/cartografia-emocional.html" class="hover:text-amber-400 transition">🌊 Cartografía Dorsal (3 Cun)</a>
                 <span class="text-stone-700">|</span>
-                <a href="fukushin.html" class="hover:text-amber-400 transition">📋 Ficha Fukushin</a>
+                <a href="https://inyodo.github.io/masaje-japones-/puntos-shu.html" class="hover:text-amber-400 transition">📍 Puntos Shu (1,5 Cun)</a>
                 <span class="text-stone-700">|</span>
-                <a href="matriz-clinica.html" class="hover:text-amber-400 transition">📊 Matriz Clínica</a>
+                <a href="https://inyodo.github.io/masaje-japones-/comparativa-shu-namikoshi.html" class="hover:text-amber-400 transition">⚖️ Comparativa Shu vs. Namikoshi</a>
+                <span class="text-stone-700">|</span>
+                <span class="text-amber-400 font-bold">🎬 Videos 8 Técnicas</span>
+                <span class="text-stone-700">|</span>
+                <a href="https://inyodo.github.io/Anma/aplicacion-abdomen.html" class="hover:text-amber-400 transition">📖 8 Manos Anpuku</a>
+                <span class="text-stone-700">|</span>
+                <a href="https://inyodo.github.io/Anma/fukushin.html" class="hover:text-amber-400 transition">📋 Ficha Fukushin</a>
+                <span class="text-stone-700">|</span>
+                <a href="https://inyodo.github.io/Anma/matriz-clinica.html" class="hover:text-amber-400 transition">📊 Matriz Clínica</a>
             </div>
             <span class="text-stone-400 font-bold uppercase tracking-widest text-[10px] whitespace-nowrap hidden sm:inline">Espacio INYO ☯️</span>
         </div>
@@ -72,16 +80,16 @@
     <!-- BOTONERA DE ACCESO A FICHAS DE ESTUDIO E IMPRIMIBLES -->
     <section class="bg-stone-100 border-b border-stone-200 py-6 px-6">
         <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-3 text-xs italic">
-            <a href="cartografia-emocional.html" class="bg-stone-900 text-white hover:bg-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+            <a href="https://inyodo.github.io/masaje-japones-/cartografia-emocional.html" class="bg-stone-900 text-white hover:bg-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
                 <i class="fas fa-feather-pointed text-amber-400"></i> Cartografía Emocional (V42 a V47)
             </a>
-            <a href="fukushin.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+            <a href="https://inyodo.github.io/Anma/fukushin.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
                 <i class="fas fa-clipboard-check text-amber-600"></i> Ficha Fukushin (PDF)
             </a>
-            <a href="matriz-clinica.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+            <a href="https://inyodo.github.io/Anma/matriz-clinica.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
                 <i class="fas fa-table-cells text-amber-600"></i> Matriz Clínica (PDF)
             </a>
-            <a href="aplicacion-abdomen.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
+            <a href="https://inyodo.github.io/Anma/aplicacion-abdomen.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
                 <i class="fas fa-print text-amber-600"></i> Protocolo 8 Pasos (PDF)
             </a>
             <a href="https://inyodo.github.io/masaje-japones-/puntos-shu.html" class="bg-white border border-stone-300 text-stone-800 hover:border-amber-600 hover:text-amber-700 px-4 py-2.5 rounded-sm font-semibold shadow-sm transition flex items-center gap-2">
@@ -305,13 +313,19 @@
                 <p class="text-[10px] text-stone-600 mt-2 tracking-widest uppercase">Instructor: Gastón Burgos • Lanús Oeste Centro</p>
             </div>
             <div class="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-[11px] not-italic">
-                <a href="index.html" class="text-amber-400 hover:underline">Manual</a>
+                <a href="https://inyodo.github.io/Anma/" class="text-amber-400 hover:underline">Manual Anma</a>
                 <span class="text-stone-700">•</span>
-                <a href="cartografia-emocional.html" class="text-amber-400 hover:underline">Cartografía Dorsal</a>
+                <a href="https://inyodo.github.io/masaje-japones-/cartografia-emocional.html" class="text-amber-400 hover:underline">Cartografía Dorsal</a>
                 <span class="text-stone-700">•</span>
-                <a href="fukushin.html" class="text-amber-400 hover:underline">Fukushin</a>
+                <a href="https://inyodo.github.io/masaje-japones-/puntos-shu.html" class="text-amber-400 hover:underline">Puntos Shu</a>
                 <span class="text-stone-700">•</span>
-                <a href="matriz-clinica.html" class="text-amber-400 hover:underline">Matriz Clínica</a>
+                <a href="https://inyodo.github.io/masaje-japones-/comparativa-shu-namikoshi.html" class="text-amber-400 hover:underline">Comparativa Shu</a>
+                <span class="text-stone-700">•</span>
+                <a href="https://inyodo.github.io/Anma/aplicacion-abdomen.html" class="text-amber-400 hover:underline">8 Manos Anpuku</a>
+                <span class="text-stone-700">•</span>
+                <a href="https://inyodo.github.io/Anma/fukushin.html" class="text-amber-400 hover:underline">Fukushin</a>
+                <span class="text-stone-700">•</span>
+                <a href="https://inyodo.github.io/Anma/matriz-clinica.html" class="text-amber-400 hover:underline">Matriz Clínica</a>
                 <span class="text-stone-700">•</span>
                 <a href="../qigong/index.html" class="text-stone-300 hover:text-amber-400">Qigong (Alejandra Paz)</a>
                 <span class="text-stone-700">•</span>
